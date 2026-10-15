@@ -1,0 +1,2499 @@
+<!doctype html>
+<html lang="zh-TW" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>蜜袋鼯新手飼育指南與全台特寵醫療地圖 | Sugar Glider Care Portal</title>
+    <meta name="description" content="專為想養與已養蜜袋鼯飼主打造的專業全方位指南：深入解析蜜袋鼯是什麼、新手飼育知識補給站、可吃與禁忌食物速查庫、全台特寵野生動物醫院整理與 Google 地圖導航。" />
+    <meta property="og:title" content="蜜袋鼯新手飼育指南與全台特寵醫療地圖" />
+    <meta property="og:description" content="給蜜袋鼯飼主的最完整繁體中文百科：物種習性、食譜禁忌、保暖空間、全台看診醫院與地圖導航。" />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <!-- Google Fonts: Plus Jakarta Sans & Noto Sans TC -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet" />
+
+    <!-- Tailwind CSS CDN for instant, zero-setup single-file rendering -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              brand: {
+                50: '#fbf8f3',
+                100: '#f5efe4',
+                200: '#ebdcc7',
+                300: '#dec2a2',
+                400: '#cea27a',
+                500: '#b88255',
+                600: '#9e6740',
+                700: '#7f4e32',
+                800: '#673f2b',
+                900: '#543324',
+              },
+              forest: {
+                50: '#f3f8f4',
+                100: '#e3efe6',
+                500: '#2d6a4f',
+                600: '#22543d',
+                700: '#1b4332',
+                800: '#143326',
+                900: '#0d221a',
+              },
+              amberaccent: {
+                500: '#d97706',
+                600: '#b45309',
+              }
+            },
+            fontFamily: {
+              sans: ['"Noto Sans TC"', '"Plus Jakarta Sans"', 'system-ui', '-apple-system', 'sans-serif'],
+              display: ['"Plus Jakarta Sans"', '"Noto Sans TC"', 'sans-serif'],
+            }
+          }
+        }
+      }
+    </script>
+
+    <style>
+      /* Custom design touches & typography math */
+      body {
+        font-family: 'Noto Sans TC', 'Plus Jakarta Sans', system-ui, sans-serif;
+        background-color: #faf9f6;
+        color: #1e293b;
+      }
+      .font-display {
+        font-family: 'Plus Jakarta Sans', 'Noto Sans TC', sans-serif;
+      }
+      .tabular-nums {
+        font-variant-numeric: tabular-nums;
+      }
+      /* Custom subtle scrollbar */
+      ::-webkit-scrollbar {
+        width: 8px;
+        height: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #f1f1ee;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #cbd5e1;
+        border-radius: 4px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #94a3b8;
+      }
+      .glass-card {
+        background: rgba(255, 255, 255, 0.95);
+        backdrop-filter: blur(8px);
+      }
+    </style>
+  </head>
+  <body class="min-h-screen text-slate-800 antialiased selection:bg-brand-200 selection:text-brand-900">
+    
+    <!-- Top Navigation Bar (Strict 3-Zone Contract: Brand — 4-5 Links — 1 Primary Action) -->
+    <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-stone-200">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between gap-8">
+        
+        <!-- Zone 1: Single clean text element wordmark -->
+        <a href="#hero" class="text-lg font-bold tracking-tight text-slate-900 whitespace-nowrap shrink-0 flex items-center gap-2.5">
+          <span class="w-8 h-8 rounded-lg bg-stone-900 text-amber-100 flex items-center justify-center font-bold text-sm shadow-sm">SG</span>
+          <span class="font-display">蜜袋鼯知識庫</span>
+        </a>
+
+        <!-- Zone 2: 4-5 single-line clean text navigation links -->
+        <nav class="hidden md:flex items-center gap-6 text-sm font-medium text-slate-600">
+          <a href="#about" class="hover:text-slate-900 transition-colors whitespace-nowrap shrink-0">物種認識</a>
+          <a href="#morphs" class="hover:text-slate-900 transition-colors whitespace-nowrap shrink-0">品種圖鑑</a>
+          <a href="#care-guide" class="hover:text-slate-900 transition-colors whitespace-nowrap shrink-0">新手指南</a>
+          <a href="#weight-tracker" class="hover:text-slate-900 transition-colors whitespace-nowrap shrink-0">體重日誌</a>
+          <a href="#food-guide" class="hover:text-slate-900 transition-colors whitespace-nowrap shrink-0">飲食禁忌</a>
+          <a href="#vet-clinics" class="hover:text-slate-900 transition-colors whitespace-nowrap shrink-0">特寵醫院</a>
+        </nav>
+
+        <!-- Zone 3: 1 primary action button -->
+        <div class="flex items-center gap-3 shrink-0">
+          <a href="#vet-clinics" class="px-4 py-2 text-xs font-semibold text-white bg-slate-900 rounded-lg hover:bg-stone-800 transition-colors whitespace-nowrap shrink-0 shadow-sm">
+            全台特寵醫療地圖
+          </a>
+          <!-- Mobile Menu Trigger -->
+          <button id="mobile-menu-btn" class="md:hidden p-2 text-slate-600 hover:text-slate-900 focus:outline-none" aria-label="切換選單">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile dropdown nav -->
+      <div id="mobile-menu" class="hidden md:hidden border-t border-stone-200 bg-white px-4 pt-2 pb-4 space-y-2">
+        <a href="#about" class="block py-2 text-sm font-medium text-slate-700 hover:text-slate-900">物種認識：蜜袋鼯是什麼</a>
+        <a href="#morphs" class="block py-2 text-sm font-medium text-slate-700 hover:text-slate-900">毛色品種圖鑑（六大品系）</a>
+        <a href="#care-guide" class="block py-2 text-sm font-medium text-slate-700 hover:text-slate-900">新手飼養指南與預算試算</a>
+        <a href="#weight-tracker" class="block py-2 text-sm font-medium text-slate-700 hover:text-slate-900">每日體重紀錄（多隻管理）</a>
+        <a href="#food-guide" class="block py-2 text-sm font-medium text-slate-700 hover:text-slate-900">可吃與絕對禁吃食物庫</a>
+        <a href="#vet-clinics" class="block py-2 text-sm font-medium text-slate-700 hover:text-slate-900">各地區特寵醫院與導航地圖</a>
+        <a href="#assessment" class="block py-2 text-sm font-medium text-slate-700 hover:text-slate-900">飼養適配性自我檢測</a>
+      </div>
+    </header>
+
+    <main id="hero" class="overflow-hidden">
+
+      <!-- Hero Section: Visual Focal Carrier with Editorial Rigor -->
+      <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-10 pb-16 lg:pt-16 lg:pb-24">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          
+          <!-- Hero Text Column -->
+          <div class="lg:col-span-7 space-y-6">
+            <!-- Quiet Metadata (No Pill Capsule) -->
+            <div class="flex items-center gap-2 text-xs font-medium text-stone-500 uppercase tracking-wider">
+              <span>有袋目野生特寵</span>
+              <span aria-hidden="true">·</span>
+              <span>Sugar Glider Care Portal</span>
+              <span aria-hidden="true">·</span>
+              <span>10-15 年長期守護承諾</span>
+            </div>
+
+            <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-slate-900 leading-tight" style="text-wrap: balance;">
+              夜空中的溫暖滑翔精靈：<br class="hidden sm:inline" />蜜袋鼯新手飼育與健康指南
+            </h1>
+
+            <p class="text-base sm:text-lg text-slate-600 leading-relaxed max-w-2xl">
+              蜜袋鼯不是倉鼠，而是來自澳洲與新幾內亞的樹棲有袋類動物。牠們擁有如黑曜石般澄澈的大眼、滑翔翼膜與極高社交情感需求。本文彙整了新手必知的飼育環境、黃金鈣磷比食譜、絕對禁吃清單，以及全台灣能看診蜜袋鼯的特寵野生動物醫院地圖。
+            </p>
+
+            <!-- Action Cluster -->
+            <div class="flex flex-wrap items-center gap-4 pt-2">
+              <a href="#food-guide" class="px-5 py-3 text-sm font-semibold text-white bg-stone-900 rounded-lg hover:bg-stone-800 transition-colors shadow-sm whitespace-nowrap">
+                查詢食物安全庫
+              </a>
+              <a href="#care-guide" class="px-5 py-3 text-sm font-semibold text-stone-800 bg-stone-100 rounded-lg hover:bg-stone-200 transition-colors whitespace-nowrap">
+                新手五大飼育要訣
+              </a>
+            </div>
+
+            <!-- Quantitative Trust Strip (Tabular Numerals, Clean Dividers) -->
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 pt-6 border-t border-stone-200">
+              <div>
+                <p class="text-2xl font-bold text-slate-900 tabular-nums">10–15<span class="text-sm font-normal text-slate-500 ml-1">年</span></p>
+                <p class="text-xs text-slate-500 mt-1">平均人工飼養壽命</p>
+              </div>
+              <div>
+                <p class="text-2xl font-bold text-slate-900 tabular-nums">24–28<span class="text-sm font-normal text-slate-500 ml-1">°C</span></p>
+                <p class="text-xs text-slate-500 mt-1">最適生存保溫環境</p>
+              </div>
+              <div>
+                <p class="text-2xl font-bold text-slate-900 tabular-nums">2 : 1</p>
+                <p class="text-xs text-slate-500 mt-1">必備飲食鈣磷黃金比</p>
+              </div>
+              <div>
+                <p class="text-2xl font-bold text-slate-900 tabular-nums">50<span class="text-sm font-normal text-slate-500 ml-1">m+</span></p>
+                <p class="text-xs text-slate-500 mt-1">自然滑翔最長距離</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Hero Visual Column -->
+          <div class="lg:col-span-5">
+            <div class="relative rounded-2xl overflow-hidden border border-stone-200 shadow-md bg-stone-100 aspect-[4/3] sm:aspect-[16/10] lg:aspect-[4/3]">
+              <img 
+                src="/src/assets/images/hero_sugar_glider_1792035608653.jpg" 
+                alt="在尤加利樹枝上的蜜袋鼯，大眼夜行性特徵與灰色毛皮" 
+                class="w-full h-full object-cover object-center transform hover:scale-105 transition-transform duration-500 ease-out"
+                loading="eager"
+                referrerpolicy="no-referrer"
+                onerror="this.parentElement.innerHTML='<div class=\'w-full h-full flex flex-col items-center justify-center bg-stone-200 p-8 text-center text-slate-700\'><p class=\'font-bold text-lg\'>蜜袋鼯（Sugar Glider）</p><p class=\'text-sm text-slate-500 mt-2\'>澳洲原生樹棲有袋類動物</p></div>'"
+              />
+              <div class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent p-4 text-white">
+                <p class="text-xs font-medium text-stone-200">學名：Petaurus breviceps（短頭袋鼯）</p>
+                <p class="text-xs text-stone-300 mt-0.5">有袋目 · 袋鼯科 · 夜行樹棲性哺乳類</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- Section 1: 【推廣主題】蜜袋鼯是什麼？物種生理與行為解構 -->
+      <section id="about" class="py-16 bg-white border-y border-stone-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          
+          <div class="max-w-3xl mb-12">
+            <span class="text-xs font-semibold uppercase tracking-wider text-stone-500">物種核心解密</span>
+            <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mt-1">
+              01. 蜜袋鼯究竟是什麼？牠不是老鼠，而是「有袋類」
+            </h2>
+            <p class="text-slate-600 mt-3 leading-relaxed">
+              許多初次接觸的人常將蜜袋鼯誤認為松鼠或飛鼠，但牠們在生物分類學上完全屬於不同綱目。蜜袋鼯是如假包換的「有袋類（Marsupial）」，與無尾熊、袋鼠有著更親近的血緣關係。了解牠們的天生生理構造，是正確照護的第一步。
+            </p>
+          </div>
+
+          <!-- Feature Grid (Clean hairline borders, no heavy cards) -->
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            
+            <!-- Item 1: 飛膜構造 -->
+            <div class="p-6 rounded-xl border border-stone-200 bg-stone-50/60 hover:bg-white hover:shadow-sm transition-all">
+              <div class="w-10 h-10 rounded-lg bg-stone-900 text-white flex items-center justify-center font-bold text-sm mb-4">
+                01
+              </div>
+              <h3 class="text-lg font-bold text-slate-900">滑翔飛膜（Patagium）</h3>
+              <p class="text-sm text-slate-600 mt-2 leading-relaxed">
+                由前肢手腕延伸至後肢腳踝的翼狀皮膜。在野外樹冠間，牠們能張開四肢如風箏般滑翔超過 50 公尺，長長帶毛的尾巴則充當空中導向舵。
+              </p>
+              <div class="mt-4 pt-4 border-t border-stone-200 text-xs text-stone-500">
+                飼育重點：籠舍需要足夠的高垂直空間以供攀爬跳躍。
+              </div>
+            </div>
+
+            <!-- Item 2: 育兒袋與繁殖 -->
+            <div class="p-6 rounded-xl border border-stone-200 bg-stone-50/60 hover:bg-white hover:shadow-sm transition-all">
+              <div class="w-10 h-10 rounded-lg bg-stone-900 text-white flex items-center justify-center font-bold text-sm mb-4">
+                02
+              </div>
+              <h3 class="text-lg font-bold text-slate-900">雌鼯的腹部育兒袋</h3>
+              <p class="text-sm text-slate-600 mt-2 leading-relaxed">
+                雌性腹部中央有條垂直開口的育兒袋（Pouch）。幼鼯出生時僅如一粒米大，會憑本能爬入母袋吸吮乳頭，約 60–70 天才會正式「出袋（OOP）」。
+              </p>
+              <div class="mt-4 pt-4 border-t border-stone-200 text-xs text-stone-500">
+                飼育重點：出袋日（OOP）是計算蜜袋鼯真實年齡的標準節點。
+              </div>
+            </div>
+
+            <!-- Item 3: 雄性氣味腺與禿頭 -->
+            <div class="p-6 rounded-xl border border-stone-200 bg-stone-50/60 hover:bg-white hover:shadow-sm transition-all">
+              <div class="w-10 h-10 rounded-lg bg-stone-900 text-white flex items-center justify-center font-bold text-sm mb-4">
+                03
+              </div>
+              <h3 class="text-lg font-bold text-slate-900">成熟雄性的「地中海」氣味腺</h3>
+              <p class="text-sm text-slate-600 mt-2 leading-relaxed">
+                公鼯約在 8-12 個月大性成熟時，頭頂正中央與胸口會逐漸脫毛並露出氣味腺體。這不是皮膚病，而是用來在族群與地盤上塗抹費洛蒙的正常生理現象。
+              </p>
+              <div class="mt-4 pt-4 border-t border-stone-200 text-xs text-stone-500">
+                飼育重點：過度洗刷籠舍會刺激其分泌更強烈的標記氣味。
+              </div>
+            </div>
+
+            <!-- Item 4: 夜行性感官 -->
+            <div class="p-6 rounded-xl border border-stone-200 bg-stone-50/60 hover:bg-white hover:shadow-sm transition-all">
+              <div class="w-10 h-10 rounded-lg bg-stone-900 text-white flex items-center justify-center font-bold text-sm mb-4">
+                04
+              </div>
+              <h3 class="text-lg font-bold text-slate-900">黑夜夜視眼與靈敏聽覺</h3>
+              <p class="text-sm text-slate-600 mt-2 leading-relaxed">
+                擁有如黑曜石般大而突出的黑眼球，能在幾無光線的黑夜中辨識昆蟲與樹枝；耳朵能各自獨立轉動偵測環境音。日間睡眠需要避光且安靜的睡眠睡窩。
+              </p>
+              <div class="mt-4 pt-4 border-t border-stone-200 text-xs text-stone-500">
+                飼育重點：晚上 9 點至清晨是其活躍期，夜間會有走動與啃咬聲。
+              </div>
+            </div>
+
+            <!-- Item 5: 強烈群居需求 -->
+            <div class="p-6 rounded-xl border border-stone-200 bg-stone-50/60 hover:bg-white hover:shadow-sm transition-all">
+              <div class="w-10 h-10 rounded-lg bg-stone-900 text-white flex items-center justify-center font-bold text-sm mb-4">
+                05
+              </div>
+              <h3 class="text-lg font-bold text-slate-900">極度依賴族群社交</h3>
+              <p class="text-sm text-slate-600 mt-2 leading-relaxed">
+                在野生環境中，蜜袋鼯以 7 至 12 隻的家族群落共同生活與互相梳理毛皮。若單獨飼養且飼主無法每天投入至少 2 小時貼身互動，極容易引發焦慮抑鬱甚至自殘自咬。
+              </p>
+              <div class="mt-4 pt-4 border-t border-stone-200 text-xs text-stone-500">
+                飼育建議：強烈建議一次飼養一對（需結紮）或投入充裕陪伴。
+              </div>
+            </div>
+
+            <!-- Item 6: 特殊的發聲語言 -->
+            <div class="p-6 rounded-xl border border-stone-200 bg-stone-50/60 hover:bg-white hover:shadow-sm transition-all">
+              <div class="w-10 h-10 rounded-lg bg-stone-900 text-white flex items-center justify-center font-bold text-sm mb-4">
+                06
+              </div>
+              <h3 class="text-lg font-bold text-slate-900">獨特的發聲語言</h3>
+              <p class="text-sm text-slate-600 mt-2 leading-relaxed">
+                害怕時會發出像小型電鋸或發動機般的「嘎嘎（Crabbing）」警告示威聲；尋找同伴或主人時會發出像小狗般節奏性的「汪汪（Barking）」呼喚聲；放鬆愉快時會發出輕微的發牌聲或呼嚕聲。
+              </p>
+              <div class="mt-4 pt-4 border-t border-stone-200 text-xs text-stone-500">
+                飼育重點：初來乍到時嘎嘎叫是正常的恐懼防禦，請勿強硬抓握。
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 2: 各品種與毛色基因圖鑑 (Color Morphs & Genetics) -->
+      <section id="morphs" class="py-16 bg-stone-100/60 border-b border-stone-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          
+          <div class="max-w-3xl mb-12">
+            <div class="flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-stone-500">
+              <span>遺傳多樣性百科</span>
+              <span aria-hidden="true">·</span>
+              <span>Sugar Glider Color Morphs</span>
+            </div>
+            <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mt-1">
+              02. 蜜袋鼯常見品種與基因毛色圖鑑
+            </h2>
+            <p class="text-slate-600 mt-3 leading-relaxed">
+              所有家養蜜袋鼯在生物學上皆屬同一物種（短頭袋鼯）。然而經過國際多年專業繁育，透過顯性、隱性與多基因突變，孕育出了多種令人驚豔的色系品系（Color Morphs）。不同品系在習性上大致相同，但特殊毛色（如白化）在光照與繁育健康上有其獨特需求。
+            </p>
+          </div>
+
+          <!-- Featured Showcase Split: WFB & Leucistic -->
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-10">
+            
+            <!-- Morph Feature 1: 白面金黃 (WFB) -->
+            <div class="p-6 bg-white rounded-2xl border border-stone-200 shadow-sm flex flex-col justify-between">
+              <div>
+                <div class="aspect-[4/3] rounded-xl overflow-hidden bg-stone-100 mb-5 border border-stone-200">
+                  <img 
+                    src="/src/assets/images/sugar_glider_morphs_1792036543882.jpg" 
+                    alt="白面金黃蜜袋鼯，臉頰乾淨無黑色耳線" 
+                    class="w-full h-full object-cover"
+                    loading="lazy"
+                    referrerpolicy="no-referrer"
+                    onerror="this.parentElement.innerHTML='<div class=\'w-full h-full flex items-center justify-center bg-stone-200 text-stone-500 text-xs\'>白面金黃蜜袋鼯 (WFB)</div>'"
+                  />
+                </div>
+                <div class="flex items-center justify-between gap-2 mb-2">
+                  <h3 class="text-lg font-bold text-slate-900">白面金黃（White Face Blonde, WFB）</h3>
+                  <span class="text-xs font-medium text-amber-800 bg-amber-50 px-2.5 py-0.5 rounded border border-amber-200">顯性基因 (Dominant)</span>
+                </div>
+                <p class="text-xs text-stone-500 mb-3">特徵：乾淨雪白面頰 · 無黑色耳條紋 · 體色淺香檳灰</p>
+                <p class="text-xs text-slate-600 leading-relaxed">
+                  極受歡迎的人氣品系。相較於原生灰，其面頰下巴兩側完全沒有黑色縱紋延伸，讓面容看起來開闊潔白如娃娃般溫柔。只需父母其中一方帶有此顯性基因，後代便有 50% 機率表現。
+                </p>
+              </div>
+              <div class="mt-4 pt-3 border-t border-stone-100 text-[11px] text-stone-400">
+                遺傳標記：單顯性 / 體質健壯 / 社交互動熱絡
+              </div>
+            </div>
+
+            <!-- Morph Feature 2: 純白黑眼 (Leucistic) -->
+            <div class="p-6 bg-white rounded-2xl border border-stone-200 shadow-sm flex flex-col justify-between">
+              <div>
+                <div class="aspect-[4/3] rounded-xl overflow-hidden bg-stone-100 mb-5 border border-stone-200">
+                  <img 
+                    src="/src/assets/images/sugar_glider_leucistic_1792036543434.jpg" 
+                    alt="純白黑眼蜜袋鼯，通體雪白與黑曜石大眼" 
+                    class="w-full h-full object-cover"
+                    loading="lazy"
+                    referrerpolicy="no-referrer"
+                    onerror="this.parentElement.innerHTML='<div class=\'w-full h-full flex items-center justify-center bg-stone-200 text-stone-500 text-xs\'>純白黑眼蜜袋鼯 (Leucistic)</div>'"
+                  />
+                </div>
+                <div class="flex items-center justify-between gap-2 mb-2">
+                  <h3 class="text-lg font-bold text-slate-900">純白黑眼（Leucistic, 簡稱 Leu）</h3>
+                  <span class="text-xs font-medium text-indigo-800 bg-indigo-50 px-2.5 py-0.5 rounded border border-indigo-200">隱性雙基因 (Recessive)</span>
+                </div>
+                <p class="text-xs text-stone-500 mb-3">特徵：通體純白無背紋 · 黑曜石大眼 · 粉紅耳鼻</p>
+                <p class="text-xs text-slate-600 leading-relaxed">
+                  夢幻頂級品系之一。毛皮如初雪般無暇純白，完全不帶任何黑色脊線條紋；但不同於白化紅眼，Leu 保留了澄澈如寶石般的深邃黑眼，視力健康正常，粉嫩的耳朵與鼻子更添靈動萌感。
+                </p>
+              </div>
+              <div class="mt-4 pt-3 border-t border-stone-100 text-[11px] text-stone-400">
+                遺傳標記：隱性遺傳 / 需雙親皆帶 Leu 基因方能表現
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Morph Details Grid (5 Additional Core Varieties) -->
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            
+            <!-- Morph 1: 經典原生灰 -->
+            <div class="p-5 bg-white rounded-xl border border-stone-200 shadow-sm flex flex-col justify-between">
+              <div>
+                <div class="flex items-center justify-between text-xs text-stone-500 mb-2">
+                  <span class="font-bold text-slate-900 text-sm">經典原生灰 (Classic Grey)</span>
+                  <span class="font-mono text-[11px] bg-stone-100 px-2 py-0.5 rounded text-stone-700">野生基準型</span>
+                </div>
+                <p class="text-xs text-slate-600 leading-relaxed mt-2">
+                  大自然萬年演化的天然保護色。背部為均勻灰褐色毛皮，從鼻樑正中貫穿至尾部的醒目黑色背中線，腹部雪白。<strong>基因庫最穩健、環境適應力與抗病力最強</strong>，最適合新手飼養。
+                </p>
+              </div>
+              <div class="mt-4 pt-3 border-t border-stone-100 text-[11px] text-emerald-800 font-medium">
+                ✔ 新手首選：體質強健、價格親民、活力充沛
+              </div>
+            </div>
+
+            <!-- Morph 2: 莫賽克 / 花斑 -->
+            <div class="p-5 bg-white rounded-xl border border-stone-200 shadow-sm flex flex-col justify-between">
+              <div>
+                <div class="flex items-center justify-between text-xs text-stone-500 mb-2">
+                  <span class="font-bold text-slate-900 text-sm">莫賽克花斑 (Mosaic)</span>
+                  <span class="font-mono text-[11px] bg-purple-50 text-purple-800 px-2 py-0.5 rounded border border-purple-200">共顯性隨機突變</span>
+                </div>
+                <p class="text-xs text-slate-600 leading-relaxed mt-2">
+                  變化最不可預測的魔法系！身上隨機分布純白斑塊。常見形態包含：<strong>白頸圈（Ringtail）</strong>宛如戴珍珠項鍊；<strong>乳牛斑（Piebald）</strong>全身大塊斑駁；以及特殊花臉，每一隻都是獨一無二的藝術品。
+                </p>
+              </div>
+              <div class="mt-4 pt-3 border-t border-stone-100 text-[11px] text-stone-500">
+                遺傳特質：花色表現極度隨機，後代斑紋不可完全複製
+              </div>
+            </div>
+
+            <!-- Morph 3: 白化紅眼 -->
+            <div class="p-5 bg-white rounded-xl border border-stone-200 shadow-sm flex flex-col justify-between">
+              <div>
+                <div class="flex items-center justify-between text-xs text-stone-500 mb-2">
+                  <span class="font-bold text-slate-900 text-sm">白化紅眼 (Albino)</span>
+                  <span class="font-mono text-[11px] bg-rose-50 text-rose-800 px-2 py-0.5 rounded border border-rose-200">隱性酪胺酸酶缺乏</span>
+                </div>
+                <p class="text-xs text-slate-600 leading-relaxed mt-2">
+                  極其稀有的白化突變。因體內無法合成黑色素，全身雪白、粉紅皮膚、雙眼呈現清透紅寶石光澤。<strong>照護需知：眼睛缺乏色素保護，對強光極度敏感</strong>，飼育環境需維持柔和避光。
+                </p>
+              </div>
+              <div class="mt-4 pt-3 border-t border-stone-100 text-[11px] text-rose-700 font-medium">
+                ⚠️ 照護重點：不可直射強光或近距離閃光燈攝影
+              </div>
+            </div>
+
+            <!-- Morph 4: 奶油白 / 鉑金 -->
+            <div class="p-5 bg-white rounded-xl border border-stone-200 shadow-sm flex flex-col justify-between">
+              <div>
+                <div class="flex items-center justify-between text-xs text-stone-500 mb-2">
+                  <span class="font-bold text-slate-900 text-sm">奶油紅眼 (Creamino)</span>
+                  <span class="font-mono text-[11px] bg-amber-50 text-amber-800 px-2 py-0.5 rounded border border-amber-200">隱性暖色突變</span>
+                </div>
+                <p class="text-xs text-slate-600 leading-relaxed mt-2">
+                  高雅的暖系色調。毛皮呈現如烤棉花糖或香檳般的奶油金黃色，背脊為溫潤的淡黃褐色，雙眼透著暗酒紅寶石光芒，氣質古典溫暖。
+                </p>
+              </div>
+              <div class="mt-4 pt-3 border-t border-stone-100 text-[11px] text-stone-500">
+                遺傳特質：隱性基因，需配對攜帶者方能培育
+              </div>
+            </div>
+
+            <!-- Morph 5: 白尾特徵 -->
+            <div class="p-5 bg-white rounded-xl border border-stone-200 shadow-sm flex flex-col justify-between">
+              <div>
+                <div class="flex items-center justify-between text-xs text-stone-500 mb-2">
+                  <span class="font-bold text-slate-900 text-sm">白尾特徵 (White Tip)</span>
+                  <span class="font-mono text-[11px] bg-stone-100 text-stone-700 px-2 py-0.5 rounded">顯性/多基因特徵</span>
+                </div>
+                <p class="text-xs text-slate-600 leading-relaxed mt-2">
+                  尾巴最末端有 1 至 3 公分的純白色毛球，就像毛筆尖沾了白墨水。白尾特徵可獨立出現在經典灰、白面金黃或莫賽克身上，辨識度極高。
+                </p>
+              </div>
+              <div class="mt-4 pt-3 border-t border-stone-100 text-[11px] text-stone-500">
+                外觀亮點：空中滑翔時白尾尖宛如引導小流星
+              </div>
+            </div>
+
+            <!-- Morph 6: 育種倫理與健康叮嚀 -->
+            <div class="p-5 bg-stone-900 text-stone-200 rounded-xl shadow-sm flex flex-col justify-between">
+              <div>
+                <div class="flex items-center gap-1.5 text-xs text-amber-300 font-bold mb-2">
+                  <span>🛡️</span>
+                  <span>專業特寵繁育倫理守則</span>
+                </div>
+                <p class="text-xs text-stone-300 leading-relaxed mt-2">
+                  特殊毛色雖然美麗，但<strong>嚴禁近親繁殖（Inbreeding）</strong>！近親交配極容易導致先天性白內障、失明、腦水腫、骨骼發育不良等遺傳疾病。購買或認養時請優先以「個體健康、親人穩定」為首要考量。
+                </p>
+              </div>
+              <div class="mt-4 pt-3 border-t border-stone-800 text-[11px] text-amber-200 font-medium">
+                生命無分貴賤 · 原生灰與稀有色皆需 15 年的真心陪伴
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+      <!-- Section 3: 【核心亮點 1】新手飼養知識補給站 -->
+      <section id="care-guide" class="py-16 bg-stone-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          
+          <div class="max-w-3xl mb-12">
+            <span class="text-xs font-semibold uppercase tracking-wider text-stone-500">全方位照護指南</span>
+            <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mt-1">
+              03. 新手飼養知識補給站：打造五星級安全家園
+            </h2>
+            <p class="text-slate-600 mt-3 leading-relaxed">
+              飼養蜜袋鼯並非只買個小籠子與飼料即可。牠們具有獨特的溫度適應極限與運動習慣，以下是每位新手必須徹底準備就緒的關鍵維生項目。
+            </p>
+          </div>
+
+          <!-- 2-Column Split: Visual & Deep Dive -->
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch mb-12">
+            
+            <!-- Left: Bonding Photo & Narrative -->
+            <div class="lg:col-span-5 flex flex-col justify-between p-6 bg-white rounded-2xl border border-stone-200 shadow-sm">
+              <div>
+                <div class="rounded-xl overflow-hidden aspect-[4/3] bg-stone-100 mb-6 border border-stone-200">
+                  <img 
+                    src="/src/assets/images/sugar_glider_bonding_1792035609827.jpg" 
+                    alt="飼主用專用布袋親暱抱著蜜袋鼯" 
+                    class="w-full h-full object-cover"
+                    loading="lazy"
+                    referrerpolicy="no-referrer"
+                    onerror="this.parentElement.innerHTML='<div class=\'w-full h-full flex items-center justify-center bg-stone-200 text-stone-500 text-sm\'>貼身育兒布袋培養感情</div>'"
+                  />
+                </div>
+                <h3 class="text-xl font-bold text-slate-900">情感建立：親人性養成術（Bonding）</h3>
+                <p class="text-sm text-slate-600 mt-3 leading-relaxed">
+                  蜜袋鼯的親人程度完全取決於耐心與氣味熟悉。剛接回家前 3-5 天，切勿強行伸手抓握。可將帶有飼主體味的乾淨棉質舊衣物剪塊置入其睡窩中，並使用透氣的「貼身外出袋（Bonding Pouch）」掛在胸前，讓牠在溫暖與心跳聲中將你的氣味與安全感連結。
+                </p>
+              </div>
+
+              <div class="mt-6 pt-4 border-t border-stone-100 text-xs text-stone-500 space-y-1">
+                <p>✔ 每天在清醒前貼身配戴 2–3 小時熟悉氣味</p>
+                <p>✔ 透過手心餵食一小片蘋果或蜂蜜水建立正向獎勵</p>
+                <p>✖ 絕不可直接從上方伸手猛抓（模仿猛禽俯衝會引發致命恐懼）</p>
+              </div>
+            </div>
+
+            <!-- Right: 4 Core Pillars of Habitat -->
+            <div class="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-6">
+              
+              <!-- Card 1: 空間需求 -->
+              <div class="p-6 bg-white rounded-xl border border-stone-200 shadow-sm flex flex-col justify-between">
+                <div>
+                  <div class="flex items-center justify-between text-xs text-stone-500 mb-2">
+                    <span class="font-medium text-slate-900">居住空間</span>
+                    <span class="tabular-nums">高度優先</span>
+                  </div>
+                  <h4 class="text-base font-bold text-slate-900">挑高垂直跳躍空間</h4>
+                  <p class="text-xs text-slate-600 mt-2 leading-relaxed">
+                    蜜袋鼯需要的是「高」而非寬的空間。成對飼養建議籠舍高度至少 80–120 公分以上，鐵線間隙必須在 1.2 公分以內，以防頭部卡住或逃脫。
+                  </p>
+                </div>
+                <div class="mt-4 pt-3 border-t border-stone-100 text-xs text-amber-700 font-medium">
+                  嚴禁使用低矮倉鼠籠或容易被啃咬吞食的油漆烤漆籠。
+                </div>
+              </div>
+
+              <!-- Card 2: 溫度與保溫燈 -->
+              <div class="p-6 bg-white rounded-xl border border-stone-200 shadow-sm flex flex-col justify-between">
+                <div>
+                  <div class="flex items-center justify-between text-xs text-stone-500 mb-2">
+                    <span class="font-medium text-slate-900">氣候調控</span>
+                    <span class="tabular-nums">24°C–28°C</span>
+                  </div>
+                  <h4 class="text-base font-bold text-slate-900">嚴防失溫：必備無光陶瓷保溫燈</h4>
+                  <p class="text-xs text-slate-600 mt-2 leading-relaxed">
+                    蜜袋鼯皮下脂肪極少，氣溫低於 20°C 容易陷入失溫呆滯、休克與低血糖致命。冬天必須搭配溫控器與防燙網無光陶瓷加熱燈；夏季需通風避免熱衰竭。
+                  </p>
+                </div>
+                <div class="mt-4 pt-3 border-t border-stone-100 text-xs text-amber-700 font-medium">
+                  失溫是新手飼養死亡率最高的緊急病症之一。
+                </div>
+              </div>
+
+              <!-- Card 3: 運動與安全跑輪 -->
+              <div class="p-6 bg-white rounded-xl border border-stone-200 shadow-sm flex flex-col justify-between">
+                <div>
+                  <div class="flex items-center justify-between text-xs text-stone-500 mb-2">
+                    <span class="font-medium text-slate-900">運動耗能</span>
+                    <span class="tabular-nums">直徑 28cm+</span>
+                  </div>
+                  <h4 class="text-base font-bold text-slate-900">無中軸專業靜音跑輪</h4>
+                  <p class="text-xs text-slate-600 mt-2 leading-relaxed">
+                    夜間活動量極大，普通倉鼠有中軸的跑輪會打斷或絞斷蜜袋鼯長尾巴造成截肢。請務必選購「無中軸安全網面跑輪（如 Wodent Wheel 或特寵專用跑輪）」。
+                  </p>
+                </div>
+                <div class="mt-4 pt-3 border-t border-stone-100 text-xs text-amber-700 font-medium">
+                  跑輪網孔需平滑密實，避免指甲勾扯受傷。
+                </div>
+              </div>
+
+              <!-- Card 4: 定期修剪指甲與布料安全 -->
+              <div class="p-6 bg-white rounded-xl border border-stone-200 shadow-sm flex flex-col justify-between">
+                <div>
+                  <div class="flex items-center justify-between text-xs text-stone-500 mb-2">
+                    <span class="font-medium text-slate-900">日常安全</span>
+                    <span class="tabular-nums">每 2-3 週</span>
+                  </div>
+                  <h4 class="text-base font-bold text-slate-900">指甲修剪與防止脫線絞勒</h4>
+                  <p class="text-xs text-slate-600 mt-2 leading-relaxed">
+                    樹棲爪子尖銳如鉤針，勾到一般毛巾脫線容易纏繞四肢造成指頭壞死。睡窩布料請嚴格挑選「搖粒絨（Polar Fleece）」無毛圈布料，並定期修剪針尖端指甲。
+                  </p>
+                </div>
+                <div class="mt-4 pt-3 border-t border-stone-100 text-xs text-amber-700 font-medium">
+                  修剪時只需剪除最前端透明尖刺，切勿剪到粉紅血管。
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Quick FAQ Accordion for Beginners -->
+          <div class="bg-white rounded-2xl border border-stone-200 p-6 lg:p-8">
+            <h3 class="text-lg font-bold text-slate-900 mb-6">新手常見疑問速解（FAQ）</h3>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+              <div class="p-4 rounded-lg bg-stone-50">
+                <h4 class="text-sm font-bold text-slate-900">Q1. 蜜袋鼯會定點上廁所嗎？</h4>
+                <p class="text-xs text-slate-600 mt-2 leading-relaxed">
+                  不會。蜜袋鼯是樹棲直腸子動物，通常睡醒出窩、攀爬或進食後數分鐘內便會排便排尿。但可透過在放風前先將其引導至指定墊材處醒腦排泄來減少意外。
+                </p>
+              </div>
+              <div class="p-4 rounded-lg bg-stone-50">
+                <h4 class="text-sm font-bold text-slate-900">Q2. 可以帶出門遛鼯嗎？</h4>
+                <p class="text-xs text-slate-600 mt-2 leading-relaxed">
+                  戶外存在野鳥獵捕、犬貓驚嚇與車聲噪音，蜜袋鼯受驚時跳竄極難追回。若要外出務必安置於防逃拉鍊的外出包中，避免無防護直接放在肩膀上。
+                </p>
+              </div>
+              <div class="p-4 rounded-lg bg-stone-50">
+                <h4 class="text-sm font-bold text-slate-900">Q3. 需要定期洗澡嗎？</h4>
+                <p class="text-xs text-slate-600 mt-2 leading-relaxed">
+                  不需要水洗！蜜袋鼯會像貓咪一樣用唾液梳理毛皮。全身水洗極易失溫感冒或吸入性肺炎。若局部沾黏髒污，僅需用溫水沾濕毛巾或無酒精濕紙巾輕輕擦拭。
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- 新手飼養預算試算器 (Sugar Glider Budget Calculator) -->
+          <div id="budget-calculator" class="mt-12 bg-white rounded-2xl border border-stone-200 p-6 sm:p-8 lg:p-10 shadow-sm">
+            <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 pb-6 border-b border-stone-200">
+              <div>
+                <div class="flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-amber-700">
+                  <span>經濟收支先期評估</span>
+                  <span aria-hidden="true">·</span>
+                  <span>真實養育成本精算</span>
+                </div>
+                <h3 class="text-xl sm:text-2xl font-bold text-slate-900 mt-1">
+                  💰 蜜袋鼯飼養預算試算器
+                </h3>
+                <p class="text-xs sm:text-sm text-slate-600 mt-1 max-w-2xl leading-relaxed">
+                  想養蜜袋鼯需要準備多少預算？輸入預計飼養隻數與自選配備，系統將自動精算「初次建置設備」、「每月固定飲食耗材」及「年度定期健檢醫療」支出，幫助新手在接回家前預先做好財務規劃。
+                </p>
+              </div>
+
+              <div class="text-xs text-stone-500 bg-stone-50 p-3 rounded-xl border border-stone-200 shrink-0">
+                <span class="font-bold text-slate-900">群居提醒：</span> 蜜袋鼯極怕寂寞，獸醫一致強烈推薦<strong>成對飼養（2隻）</strong>
+              </div>
+            </div>
+
+            <!-- Controls Form -->
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 pt-8">
+              
+              <!-- Left Inputs Column -->
+              <div class="lg:col-span-5 space-y-6">
+                
+                <!-- Qty Selector -->
+                <div>
+                  <label class="block text-xs font-bold text-slate-900 uppercase tracking-wider mb-2">
+                    預計飼養隻數
+                  </label>
+                  <div class="flex items-center gap-3">
+                    <button type="button" id="btn-qty-minus" class="w-10 h-10 rounded-lg bg-stone-100 hover:bg-stone-200 text-slate-800 font-bold text-lg flex items-center justify-center transition-colors">
+                      -
+                    </button>
+                    <div class="relative flex-1">
+                      <input 
+                        type="number" 
+                        id="budget-qty" 
+                        min="1" 
+                        max="8" 
+                        value="2" 
+                        class="w-full text-center py-2.5 px-3 bg-stone-50 border border-stone-300 rounded-lg font-bold text-slate-900 text-lg tabular-nums focus:outline-none focus:ring-2 focus:ring-stone-800"
+                      />
+                    </div>
+                    <button type="button" id="btn-qty-plus" class="w-10 h-10 rounded-lg bg-stone-100 hover:bg-stone-200 text-slate-800 font-bold text-lg flex items-center justify-center transition-colors">
+                      +
+                    </button>
+                  </div>
+                  <!-- Quick chips -->
+                  <div class="flex flex-wrap gap-2 mt-2.5">
+                    <button type="button" class="budget-preset-btn px-2.5 py-1 text-xs rounded border border-stone-200 text-slate-600 hover:bg-stone-100" data-val="1">1 隻（需充裕陪伴）</button>
+                    <button type="button" class="budget-preset-btn active px-2.5 py-1 text-xs rounded bg-stone-900 text-white font-medium" data-val="2">2 隻（推薦成對 ⭐）</button>
+                    <button type="button" class="budget-preset-btn px-2.5 py-1 text-xs rounded border border-stone-200 text-slate-600 hover:bg-stone-100" data-val="3">3 隻</button>
+                    <button type="button" class="budget-preset-btn px-2.5 py-1 text-xs rounded border border-stone-200 text-slate-600 hover:bg-stone-100" data-val="4">4 隻</button>
+                  </div>
+                </div>
+
+                <!-- Customization Toggles -->
+                <div class="space-y-3 pt-2">
+                  <label class="block text-xs font-bold text-slate-900 uppercase tracking-wider">
+                    自選配備與醫療項目
+                  </label>
+
+                  <!-- Toggle 1: Include Initial Equipment -->
+                  <label class="flex items-start gap-3 p-3 rounded-xl bg-stone-50 border border-stone-200 cursor-pointer hover:bg-stone-100/70 transition-colors">
+                    <input type="checkbox" id="budget-include-hardware" checked class="mt-0.5 w-4 h-4 text-stone-900 rounded border-stone-300 focus:ring-stone-900" />
+                    <div>
+                      <p class="text-xs font-bold text-slate-900">包含初期全新硬體設備（一次性）</p>
+                      <p class="text-[11px] text-slate-500 mt-0.5">挑高大籠舍、陶瓷保溫燈具+溫控器、無中軸安全大跑輪、布窩外出包等（約 NT$ 6,500 ~ 9,000）</p>
+                    </div>
+                  </label>
+
+                  <!-- Toggle 2: Include Neuter/Spay -->
+                  <label class="flex items-start gap-3 p-3 rounded-xl bg-stone-50 border border-stone-200 cursor-pointer hover:bg-stone-100/70 transition-colors">
+                    <input type="checkbox" id="budget-include-neuter" checked class="mt-0.5 w-4 h-4 text-stone-900 rounded border-stone-300 focus:ring-stone-900" />
+                    <div>
+                      <p class="text-xs font-bold text-slate-900">包含公鼯結紮手術費用（一次性）</p>
+                      <p class="text-[11px] text-slate-500 mt-0.5">特寵微創氣體麻醉手術（約 NT$ 3,000 / 隻），大幅減少發情焦躁、氣味標記與自殘行為</p>
+                    </div>
+                  </label>
+
+                  <!-- Toggle 3: Advanced Annual Vet Checkup -->
+                  <label class="flex items-start gap-3 p-3 rounded-xl bg-stone-50 border border-stone-200 cursor-pointer hover:bg-stone-100/70 transition-colors">
+                    <input type="checkbox" id="budget-vet-advanced" class="mt-0.5 w-4 h-4 text-stone-900 rounded border-stone-300 focus:ring-stone-900" />
+                    <div>
+                      <p class="text-xs font-bold text-slate-900">升級進階年度健檢方案（年健檢）</p>
+                      <p class="text-[11px] text-slate-500 mt-0.5">除基礎視聽牙科與 2 次顯微糞檢外，加選 X 光骨骼檢查或微量血檢（每隻每年增加約 NT$ 1,500）</p>
+                    </div>
+                  </label>
+                </div>
+
+                <!-- Emergency Fund Callout -->
+                <div class="p-3.5 rounded-xl bg-rose-50 border border-rose-200 text-rose-900 text-xs leading-relaxed">
+                  <div class="font-bold flex items-center gap-1 mb-1">
+                    <span>🚨</span>
+                    <span>獸醫師提醒：常備「緊急急難醫療金」</span>
+                  </div>
+                  蜜袋鼯骨骼細小、體質敏感，突發性骨折手術或保溫箱急症住院常需 <strong>NT$ 10,000 ~ 20,000</strong>，建議飼養前為其開設專屬醫療儲備帳戶。
+                </div>
+
+              </div>
+
+              <!-- Right Results Column -->
+              <div class="lg:col-span-7 flex flex-col justify-between bg-stone-50/80 rounded-2xl border border-stone-200 p-6 sm:p-7">
+                
+                <!-- 3 Key Metric Displays -->
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-6">
+                  
+                  <!-- Metric 1: Monthly -->
+                  <div class="p-4 rounded-xl bg-white border border-stone-200 shadow-sm">
+                    <p class="text-xs font-medium text-stone-500">預估每月養育支出</p>
+                    <p class="text-xl sm:text-2xl font-extrabold text-slate-900 mt-1 tabular-nums">
+                      NT$ <span id="res-monthly">2,500</span>
+                    </p>
+                    <p class="text-[11px] text-stone-500 mt-1">飲食 + 耗材 + 電費</p>
+                  </div>
+
+                  <!-- Metric 2: Annual Vet -->
+                  <div class="p-4 rounded-xl bg-white border border-stone-200 shadow-sm">
+                    <p class="text-xs font-medium text-stone-500">預估每年例行健檢</p>
+                    <p class="text-xl sm:text-2xl font-extrabold text-slate-900 mt-1 tabular-nums">
+                      NT$ <span id="res-annual-vet">3,200</span>
+                    </p>
+                    <p class="text-[11px] text-stone-500 mt-1">理學健檢 + 定期糞檢</p>
+                  </div>
+
+                  <!-- Metric 3: First Year Total -->
+                  <div class="p-4 rounded-xl bg-white border border-stone-200 shadow-sm">
+                    <p class="text-xs font-medium text-stone-500">第一年總預算預估</p>
+                    <p class="text-xl sm:text-2xl font-extrabold text-amber-700 mt-1 tabular-nums">
+                      NT$ <span id="res-first-year">39,200</span>
+                    </p>
+                    <p class="text-[11px] text-stone-500 mt-1">含初期設備與全年開銷</p>
+                  </div>
+
+                </div>
+
+                <!-- Detailed Breakdown Table -->
+                <div class="space-y-3 bg-white p-4 sm:p-5 rounded-xl border border-stone-200">
+                  <h4 class="text-xs font-bold text-slate-900 uppercase tracking-wider border-b border-stone-100 pb-2">
+                    各項費用明細試算（以 <span id="res-summary-qty" class="text-amber-700 font-bold">2</span> 隻為基準）
+                  </h4>
+
+                  <div class="space-y-2 text-xs">
+                    <!-- Item: HPW & Food -->
+                    <div class="flex items-center justify-between text-slate-700 py-1 border-b border-stone-100">
+                      <div>
+                        <span class="font-semibold text-slate-900">HPW / BAP 主食配方與純蜂蜜</span>
+                        <span class="text-[11px] text-stone-400 block sm:inline sm:ml-2">高純度蜂花粉、專用蛋白粉</span>
+                      </div>
+                      <span class="font-mono tabular-nums text-slate-900 whitespace-nowrap">NT$ <span id="item-hpw">700</span> / 月</span>
+                    </div>
+
+                    <!-- Item: Fruits & Insects -->
+                    <div class="flex items-center justify-between text-slate-700 py-1 border-b border-stone-100">
+                      <div>
+                        <span class="font-semibold text-slate-900">新鮮蔬果與活體昆蟲（附鈣粉）</span>
+                        <span class="text-[11px] text-stone-400 block sm:inline sm:ml-2">木瓜、藍莓、杜比亞、蟋蟀</span>
+                      </div>
+                      <span class="font-mono tabular-nums text-slate-900 whitespace-nowrap">NT$ <span id="item-fresh">1,100</span> / 月</span>
+                    </div>
+
+                    <!-- Item: Consumables & Electricity -->
+                    <div class="flex items-center justify-between text-slate-700 py-1 border-b border-stone-100">
+                      <div>
+                        <span class="font-semibold text-slate-900">吸水尿布墊、無塵墊料與保溫電費</span>
+                        <span class="text-[11px] text-stone-400 block sm:inline sm:ml-2">冬季陶瓷保溫燈、清潔除臭耗材</span>
+                      </div>
+                      <span class="font-mono tabular-nums text-slate-900 whitespace-nowrap">NT$ <span id="item-consumables">700</span> / 月</span>
+                    </div>
+
+                    <!-- Item: Vet Checkup -->
+                    <div class="flex items-center justify-between text-slate-700 py-1 border-b border-stone-100">
+                      <div>
+                        <span class="font-semibold text-slate-900">非犬貓特寵例行健康檢查</span>
+                        <span class="text-[11px] text-stone-400 block sm:inline sm:ml-2">牙齒理學視診 + 每年 2 次糞便寄生蟲顯微篩檢</span>
+                      </div>
+                      <span class="font-mono tabular-nums text-slate-900 whitespace-nowrap">NT$ <span id="item-vet-annual">3,200</span> / 年</span>
+                    </div>
+
+                    <!-- Item: Initial Setup -->
+                    <div id="row-hardware" class="flex items-center justify-between text-slate-700 py-1 border-b border-stone-100">
+                      <div>
+                        <span class="font-semibold text-slate-900">初期硬體建置（挑高籠+保溫燈組+跑輪）</span>
+                        <span class="text-[11px] text-stone-400 block sm:inline sm:ml-2">一次性投入</span>
+                      </div>
+                      <span class="font-mono tabular-nums text-slate-900 whitespace-nowrap">NT$ <span id="item-hardware">6,500</span></span>
+                    </div>
+
+                    <!-- Item: Neuter -->
+                    <div id="row-neuter" class="flex items-center justify-between text-slate-700 py-1">
+                      <div>
+                        <span class="font-semibold text-slate-900">特寵微創氣體麻醉結紮手術</span>
+                        <span class="text-[11px] text-stone-400 block sm:inline sm:ml-2">一次性支出</span>
+                      </div>
+                      <span class="font-mono tabular-nums text-slate-900 whitespace-nowrap">NT$ <span id="item-neuter">6,000</span></span>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Advice Footnote -->
+                <div class="pt-4 text-[11px] text-stone-500 flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+                  <span>* 費用估算基於台灣非犬貓特寵市場平均價格，實際金額依品牌與各醫院收費標準為準。</span>
+                  <a href="#vet-clinics" class="text-slate-900 font-semibold underline hover:text-stone-700 whitespace-nowrap">
+                    查看特寵醫院地圖 →
+                  </a>
+                </div>
+
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- Section 4: 每日體重健康日誌 (支援多隻寵物管理) -->
+      <section id="weight-tracker" class="py-16 bg-white border-b border-stone-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          
+          <div class="max-w-3xl mb-10">
+            <div class="flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-rose-700">
+              <span>關鍵健康哨兵</span>
+              <span aria-hidden="true">·</span>
+              <span>Daily Weight Monitoring</span>
+            </div>
+            <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mt-1">
+              04. 每日體重健康日誌（支援多隻寵物管理）
+            </h2>
+            <p class="text-slate-600 mt-3 leading-relaxed">
+              蜜袋鼯身為野生被捕食動物，具有極度強烈的「隱匿疾病天性」。在牠們外表看起來無精打采前，<strong>體重驟降（3–5 天內下降超過 8–10%）往往是牙齒病灶、寄生蟲、脫水或 MBD 最早的唯一警訊</strong>。建議每天或每週固定於剛睡醒時使用精準料理秤測量記錄。
+            </p>
+          </div>
+
+          <!-- Tracker Dashboard Card -->
+          <div class="bg-stone-50 rounded-2xl border border-stone-200 p-6 lg:p-8 shadow-sm">
+            
+            <!-- Multi-Pet Switcher Header -->
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-6 border-b border-stone-200">
+              <div>
+                <p class="text-xs font-bold text-slate-500 uppercase tracking-wider">切換當前記錄寵物</p>
+                <div id="pet-switcher-container" class="flex flex-wrap items-center gap-2 mt-2">
+                  <!-- Dynamically populated pet selector tabs -->
+                </div>
+              </div>
+
+              <!-- Add Pet Button -->
+              <button id="btn-open-add-pet" type="button" class="flex items-center gap-1.5 px-3.5 py-2 text-xs font-semibold text-white bg-stone-900 hover:bg-stone-800 rounded-lg transition-colors shadow-sm shrink-0 self-start sm:self-auto">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
+                </svg>
+                <span>新增蜜袋鼯檔案</span>
+              </button>
+            </div>
+
+            <!-- Add Pet Modal / Expandable Form (Hidden by default) -->
+            <div id="add-pet-modal" class="hidden my-6 p-5 rounded-xl bg-white border border-stone-300 shadow-md">
+              <div class="flex items-center justify-between mb-4 pb-2 border-b border-stone-100">
+                <h4 class="text-sm font-bold text-slate-900 flex items-center gap-2">
+                  <span>🐾</span>
+                  <span>建立新蜜袋鼯健康檔案</span>
+                </h4>
+                <button id="btn-close-add-pet" type="button" class="text-stone-400 hover:text-stone-600 text-sm">✕ 取消</button>
+              </div>
+              <form id="form-add-pet" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 text-xs">
+                <div>
+                  <label class="block font-semibold text-slate-700 mb-1">寶貝名字 *</label>
+                  <input type="text" id="new-pet-name" required placeholder="例如：糖糖、球球" class="w-full px-3 py-2 bg-stone-50 border border-stone-300 rounded-lg focus:outline-none focus:ring-1 focus:ring-stone-900 text-slate-900" />
+                </div>
+                <div>
+                  <label class="block font-semibold text-slate-700 mb-1">性別 *</label>
+                  <select id="new-pet-gender" class="w-full px-3 py-2 bg-stone-50 border border-stone-300 rounded-lg focus:outline-none focus:ring-1 focus:ring-stone-900 text-slate-900">
+                    <option value="male">公鼯 (♂)</option>
+                    <option value="female">母鼯 (♀)</option>
+                    <option value="male-neutered">公鼯已結紮 (♂✂️)</option>
+                    <option value="female-spayed">母鼯已結紮 (♀✂️)</option>
+                  </select>
+                </div>
+                <div>
+                  <label class="block font-semibold text-slate-700 mb-1">毛色品種</label>
+                  <select id="new-pet-morph" class="w-full px-3 py-2 bg-stone-50 border border-stone-300 rounded-lg focus:outline-none focus:ring-1 focus:ring-stone-900 text-slate-900">
+                    <option value="經典原生灰">經典原生灰</option>
+                    <option value="白面金黃 (WFB)">白面金黃 (WFB)</option>
+                    <option value="純白黑眼 (Leucistic)">純白黑眼 (Leucistic)</option>
+                    <option value="莫賽克花斑 (Mosaic)">莫賽克花斑 (Mosaic)</option>
+                    <option value="白化紅眼 (Albino)">白化紅眼 (Albino)</option>
+                    <option value="奶油紅眼 (Creamino)">奶油紅眼 (Creamino)</option>
+                    <option value="白尾 (White Tip)">白尾 (White Tip)</option>
+                  </select>
+                </div>
+                <div>
+                  <label class="block font-semibold text-slate-700 mb-1">出生 / 出袋日 (OOP)</label>
+                  <input type="date" id="new-pet-birth" class="w-full px-3 py-2 bg-stone-50 border border-stone-300 rounded-lg focus:outline-none focus:ring-1 focus:ring-stone-900 text-slate-900" />
+                </div>
+                <div class="sm:col-span-2 lg:col-span-4 flex justify-end gap-2 pt-2">
+                  <button type="submit" class="px-4 py-2 bg-stone-900 text-white font-medium rounded-lg hover:bg-stone-800 transition-colors">確認新增</button>
+                </div>
+              </form>
+            </div>
+
+            <!-- Current Selected Pet Profile & Vital Strip -->
+            <div id="current-pet-banner" class="my-6 p-4 rounded-xl bg-white border border-stone-200 flex flex-col md:flex-row md:items-center justify-between gap-4">
+              <div class="flex items-center gap-3">
+                <div id="cur-pet-avatar" class="w-12 h-12 rounded-full bg-stone-100 border border-stone-200 flex items-center justify-center text-xl shrink-0">
+                  🐾
+                </div>
+                <div>
+                  <div class="flex items-center gap-2">
+                    <h3 id="cur-pet-name" class="text-base font-bold text-slate-900">載入中...</h3>
+                    <span id="cur-pet-gender-badge" class="text-xs px-2 py-0.5 rounded bg-stone-100 text-slate-700 font-medium">♂ 公鼯</span>
+                    <span id="cur-pet-morph-text" class="text-xs text-stone-500">經典原生灰</span>
+                  </div>
+                  <p id="cur-pet-oop" class="text-xs text-stone-400 mt-0.5">出袋日 (OOP)：2025/08/10</p>
+                </div>
+              </div>
+
+              <!-- Vital Highlights -->
+              <div class="grid grid-cols-2 sm:grid-cols-3 gap-4 border-t md:border-t-0 md:border-l border-stone-100 pt-3 md:pt-0 md:pl-6">
+                <div>
+                  <p class="text-[11px] text-stone-400 font-medium">最新測量體重</p>
+                  <p class="text-xl font-bold text-slate-900 tabular-nums">
+                    <span id="cur-latest-weight">--</span> <span class="text-xs font-normal text-stone-500">g</span>
+                  </p>
+                </div>
+                <div>
+                  <p class="text-[11px] text-stone-400 font-medium">相較前次變化</p>
+                  <p id="cur-weight-diff" class="text-sm font-bold tabular-nums text-slate-700 mt-1">--</p>
+                </div>
+                <div class="col-span-2 sm:col-span-1">
+                  <p class="text-[11px] text-stone-400 font-medium">健康評估狀態</p>
+                  <p id="cur-health-status" class="text-xs font-semibold text-emerald-700 mt-1">穩定正常</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Weight Log Input & History Split -->
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+              
+              <!-- Left: Input Form (lg:col-span-5) -->
+              <div class="lg:col-span-5 bg-white p-5 rounded-xl border border-stone-200">
+                <h4 class="text-xs font-bold text-slate-900 uppercase tracking-wider mb-4 flex items-center gap-1.5">
+                  <span>⚖️</span>
+                  <span>新增今日體重測量紀錄</span>
+                </h4>
+
+                <form id="form-add-weight" class="space-y-4 text-xs">
+                  <div>
+                    <label class="block font-semibold text-slate-700 mb-1">測量日期</label>
+                    <input type="date" id="input-weight-date" required class="w-full px-3 py-2 bg-stone-50 border border-stone-300 rounded-lg text-slate-900 focus:outline-none focus:ring-1 focus:ring-stone-900" />
+                  </div>
+
+                  <div>
+                    <label class="block font-semibold text-slate-700 mb-1">體重數值（公克 g）*</label>
+                    <div class="relative">
+                      <input type="number" id="input-weight-val" step="0.1" min="10" max="300" required placeholder="例如：118.5" class="w-full px-3 py-2 pr-8 bg-stone-50 border border-stone-300 rounded-lg font-bold text-slate-900 text-base tabular-nums focus:outline-none focus:ring-1 focus:ring-stone-900" />
+                      <span class="absolute right-3 top-2.5 text-stone-400 font-medium">g</span>
+                    </div>
+                    <p class="text-[11px] text-stone-400 mt-1">健康成鼯標準參考：公鼯 100–160g，母鼯 80–130g</p>
+                  </div>
+
+                  <div>
+                    <label class="block font-semibold text-slate-700 mb-1">健康狀態與行為筆記</label>
+                    <!-- Quick note chips -->
+                    <div class="flex flex-wrap gap-1.5 mb-2">
+                      <button type="button" class="quick-note-btn px-2 py-0.5 rounded bg-stone-100 hover:bg-stone-200 text-slate-700 text-[11px]">食慾良好</button>
+                      <button type="button" class="quick-note-btn px-2 py-0.5 rounded bg-stone-100 hover:bg-stone-200 text-slate-700 text-[11px]">活潑跑輪</button>
+                      <button type="button" class="quick-note-btn px-2 py-0.5 rounded bg-stone-100 hover:bg-stone-200 text-slate-700 text-[11px]">輕微挑食</button>
+                      <button type="button" class="quick-note-btn px-2 py-0.5 rounded bg-stone-100 hover:bg-stone-200 text-slate-700 text-[11px]">略有軟便</button>
+                      <button type="button" class="quick-note-btn px-2 py-0.5 rounded bg-stone-100 hover:bg-stone-200 text-slate-700 text-[11px]">發情鳴叫</button>
+                    </div>
+                    <input type="text" id="input-weight-note" placeholder="自由填寫今日精神、飲食或排泄細節..." class="w-full px-3 py-2 bg-stone-50 border border-stone-300 rounded-lg text-slate-900 focus:outline-none focus:ring-1 focus:ring-stone-900" />
+                  </div>
+
+                  <!-- Alert Banner (Dynamic) -->
+                  <div id="weight-alert-box" class="hidden p-3 rounded-lg bg-rose-50 border border-rose-200 text-rose-800 text-[11px] leading-relaxed">
+                    <!-- Injected via JS when weight drop is critical -->
+                  </div>
+
+                  <button type="submit" class="w-full py-2.5 px-4 bg-stone-900 hover:bg-stone-800 text-white font-semibold rounded-lg shadow-sm transition-colors text-xs flex items-center justify-center gap-1.5">
+                    <span>儲存並同步更新紀錄</span>
+                  </button>
+                </form>
+              </div>
+
+              <!-- Right: History Records Table (lg:col-span-7) -->
+              <div class="lg:col-span-7 bg-white p-5 rounded-xl border border-stone-200 flex flex-col justify-between">
+                <div>
+                  <div class="flex items-center justify-between pb-3 border-b border-stone-100 mb-3">
+                    <h4 class="text-xs font-bold text-slate-900 uppercase tracking-wider">
+                      歷史體重與健康歷程
+                    </h4>
+                    <span class="text-[11px] text-stone-400">本機自動保存</span>
+                  </div>
+
+                  <!-- Table Container -->
+                  <div class="overflow-x-auto max-h-[360px] overflow-y-auto">
+                    <table class="w-full text-left text-xs border-collapse">
+                      <thead>
+                        <tr class="border-b border-stone-200 text-stone-400 font-medium">
+                          <th class="py-2 pr-3">測量日期</th>
+                          <th class="py-2 px-3">體重 (g)</th>
+                          <th class="py-2 px-3">波動變化</th>
+                          <th class="py-2 px-3">狀態筆記</th>
+                          <th class="py-2 pl-3 text-right">操作</th>
+                        </tr>
+                      </thead>
+                      <tbody id="weight-history-tbody" class="divide-y divide-stone-100">
+                        <!-- Dynamically populated rows -->
+                      </tbody>
+                    </table>
+                  </div>
+
+                  <!-- Empty Table Placeholder -->
+                  <div id="weight-history-empty" class="hidden text-center py-10">
+                    <p class="text-xs text-stone-400">目前尚無體重記錄，請從左側新增第一筆測量值！</p>
+                  </div>
+                </div>
+
+                <!-- Health Guideline Footnote -->
+                <div class="mt-4 pt-3 border-t border-stone-100 text-[11px] text-stone-500 space-y-1">
+                  <p>💡 <strong>體重測量秘訣：</strong>建議固定在晚間起床尚未大量進食前測量；若發現<strong>連續 3 天體重下滑或單次降幅 > 8%</strong>，請立即安排特寵醫師糞檢與口腔檢查！</p>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+      <!-- Section 5: 【核心亮點 2】飲食大百科：可吃、限量與絕對禁吃食物庫 -->
+      <section id="food-guide" class="py-16 bg-white border-b border-stone-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          
+          <div class="max-w-3xl mb-10">
+            <span class="text-xs font-semibold uppercase tracking-wider text-stone-500">營養科學與禁忌速查</span>
+            <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mt-1">
+              05. 飲食大百科：可吃與絕對禁吃的致命食物庫
+            </h2>
+            <p class="text-slate-600 mt-3 leading-relaxed">
+              「後肢癱瘓（MBD 代謝性骨病）」是家養蜜袋鼯最常見的死因，主因就是長期餵食單一水果或葵花子導致嚴重的鈣磷不平衡。蜜袋鼯需要 <strong>2:1 的黃金鈣磷比</strong> 與足量蛋白質。
+            </p>
+          </div>
+
+          <!-- Visual Nutrition Banner -->
+          <div class="mb-10 rounded-2xl border border-stone-200 bg-stone-50 overflow-hidden">
+            <div class="grid grid-cols-1 lg:grid-cols-12 items-center">
+              <div class="lg:col-span-5 aspect-[4/3] bg-stone-100">
+                <img 
+                  src="/src/assets/images/sugar_glider_diet_1792035609945.jpg" 
+                  alt="新鮮水果木瓜藍莓與麵包蟲蛋白質蜜袋鼯食譜" 
+                  class="w-full h-full object-cover"
+                  loading="lazy"
+                  referrerpolicy="no-referrer"
+                  onerror="this.parentElement.innerHTML='<div class=\'w-full h-full flex items-center justify-center bg-stone-200 text-stone-500 text-sm\'>營養均衡的蜜袋鼯膳食</div>'"
+                />
+              </div>
+              <div class="lg:col-span-7 p-6 lg:p-8 space-y-4">
+                <div class="text-xs font-bold text-emerald-800 uppercase tracking-wider">國際獸醫推廣食譜系統</div>
+                <h3 class="text-xl font-bold text-slate-900">黃金三大飲食比例原則</h3>
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-2">
+                  <div class="p-3.5 bg-white rounded-lg border border-stone-200">
+                    <p class="text-sm font-bold text-slate-900">50% 主食配方</p>
+                    <p class="text-xs text-slate-500 mt-1">HPW 或 BAP 配方泥（含高純度蜂花粉、專用蛋白粉、純蜂蜜）</p>
+                  </div>
+                  <div class="p-3.5 bg-white rounded-lg border border-stone-200">
+                    <p class="text-sm font-bold text-slate-900">25% 蔬果多樣化</p>
+                    <p class="text-xs text-slate-500 mt-1">木瓜（高鈣）、藍莓、蘋果去籽、綠花椰菜、胡蘿蔔</p>
+                  </div>
+                  <div class="p-3.5 bg-white rounded-lg border border-stone-200">
+                    <p class="text-sm font-bold text-slate-900">25% 優質蛋白質</p>
+                    <p class="text-xs text-slate-500 mt-1">熟水煮蛋蛋白、無油煮雞胸肉、杜比亞蟑螂、蟋蟀、大麥蟲</p>
+                  </div>
+                </div>
+                <p class="text-xs text-slate-500 leading-relaxed pt-1">
+                  💡 注意：昆蟲磷含量高，餵食時建議定期裹上不含維生素 D3 過量的爬蟲/特寵專用鈣粉，以保護骨骼發育。
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Interactive Food Safety Checker Component -->
+          <div class="bg-stone-50/70 rounded-2xl border border-stone-200 p-6 lg:p-8">
+            <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-6">
+              <div>
+                <h3 class="text-lg font-bold text-slate-900">常見食材即時安全資料庫</h3>
+                <p class="text-xs text-slate-500 mt-1">點擊標籤切換或輸入關鍵字即時搜尋食材（共收錄 24 項常見食物）</p>
+              </div>
+
+              <!-- Search Input -->
+              <div class="relative w-full md:w-72">
+                <input 
+                  type="text" 
+                  id="food-search-input" 
+                  placeholder="搜尋食物，如：蘋果、酪梨、優格..." 
+                  class="w-full pl-9 pr-4 py-2 text-xs bg-white border border-stone-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-stone-800 text-slate-900 placeholder:text-stone-400"
+                />
+                <svg class="w-4 h-4 text-stone-400 absolute left-3 top-2.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                </svg>
+              </div>
+            </div>
+
+            <!-- Filter Buttons (Segmented Controls) -->
+            <div class="flex flex-wrap gap-2 pb-6 border-b border-stone-200" id="food-filter-tabs">
+              <button data-filter="all" class="food-tab-btn active px-3.5 py-1.5 text-xs font-semibold rounded-lg bg-stone-900 text-white shadow-sm transition-colors whitespace-nowrap">
+                全部食材 (<span id="count-all">24</span>)
+              </button>
+              <button data-filter="safe" class="food-tab-btn px-3.5 py-1.5 text-xs font-medium rounded-lg bg-white text-stone-700 border border-stone-200 hover:bg-stone-100 transition-colors whitespace-nowrap">
+                🟢 安全可吃 (<span id="count-safe">10</span>)
+              </button>
+              <button data-filter="caution" class="food-tab-btn px-3.5 py-1.5 text-xs font-medium rounded-lg bg-white text-stone-700 border border-stone-200 hover:bg-stone-100 transition-colors whitespace-nowrap">
+                🟡 限量或去籽去皮 (<span id="count-caution">6</span>)
+              </button>
+              <button data-filter="danger" class="food-tab-btn px-3.5 py-1.5 text-xs font-medium rounded-lg bg-white text-stone-700 border border-stone-200 hover:bg-stone-100 transition-colors whitespace-nowrap">
+                🔴 絕對禁吃 / 致命毒性 (<span id="count-danger">8</span>)
+              </button>
+            </div>
+
+            <!-- Food Grid Container (Dynamic) -->
+            <div id="food-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 pt-6">
+              <!-- Dynamically populated via JavaScript -->
+            </div>
+
+            <!-- Empty Search State -->
+            <div id="food-empty" class="hidden text-center py-12">
+              <p class="text-sm text-stone-500 font-medium">找不到符合關鍵字的食物項目</p>
+              <p class="text-xs text-stone-400 mt-1">請嘗試輸入常見中文字詞，如「葡萄」、「蛋」、「牛奶」或點選其他分類</p>
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+      <!-- Section 6: 【核心亮點 3】各地區有看蜜袋鼯的動物醫院整理及地圖連結 -->
+      <section id="vet-clinics" class="py-16 bg-stone-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          
+          <div class="max-w-3xl mb-8">
+            <span class="text-xs font-semibold uppercase tracking-wider text-rose-700">醫療急診速查</span>
+            <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mt-1">
+              06. 全台特寵與野生動物專科醫院地圖導覽
+            </h2>
+            <p class="text-slate-600 mt-3 leading-relaxed">
+              <strong>蜜袋鼯並非一般犬貓！</strong> 犬貓常備藥物與劑量、甚至常規麻醉劑對蜜袋鼯可能造成致命休克。看診務必指定「非犬貓特殊寵物 / 野生動物專科」獸醫師。以下整理全台北中南東信譽卓著之特寵醫院，點擊按鈕即可<strong>一鍵直達 Google 地圖導航</strong>或<strong>致電預約</strong>。
+            </p>
+          </div>
+
+          <!-- Alert Callout for Emergency -->
+          <div class="mb-8 p-4 rounded-xl bg-amber-50 border border-amber-200 text-amber-900 text-xs sm:text-sm flex items-start gap-3">
+            <span class="text-base shrink-0">⚠️</span>
+            <div class="leading-relaxed">
+              <strong class="font-bold">就診前強烈提醒：</strong>
+              特寵門診多採「全面預約制」或「指定醫師值班制」。出發前務必先去電確認當日特寵醫師是否看診，急診前先通報病情並攜帶保溫包，以免撲空延誤病情。
+            </div>
+          </div>
+
+          <!-- Region Navigation Tabs & Search -->
+          <div class="bg-white rounded-2xl border border-stone-200 p-6 shadow-sm mb-8">
+            <div class="flex flex-col md:flex-row items-stretch md:items-center justify-between gap-4 mb-6">
+              <!-- Region Tabs -->
+              <div class="flex flex-wrap gap-2" id="region-filter-tabs">
+                <button data-region="all" class="vet-tab-btn active px-4 py-2 text-xs font-semibold rounded-lg bg-stone-900 text-white shadow-sm transition-colors whitespace-nowrap">
+                  全台灣 (<span id="count-vet-all">19</span>)
+                </button>
+                <button data-region="north" class="vet-tab-btn px-4 py-2 text-xs font-medium rounded-lg bg-stone-100 text-slate-700 hover:bg-stone-200 transition-colors whitespace-nowrap">
+                  北部地區 (雙北/桃竹)
+                </button>
+                <button data-region="central" class="vet-tab-btn px-4 py-2 text-xs font-medium rounded-lg bg-stone-100 text-slate-700 hover:bg-stone-200 transition-colors whitespace-nowrap">
+                  中部地區 (中彰投)
+                </button>
+                <button data-region="south" class="vet-tab-btn px-4 py-2 text-xs font-medium rounded-lg bg-stone-100 text-slate-700 hover:bg-stone-200 transition-colors whitespace-nowrap">
+                  南部地區 (雲嘉南高屏)
+                </button>
+                <button data-region="east" class="vet-tab-btn px-4 py-2 text-xs font-medium rounded-lg bg-stone-100 text-slate-700 hover:bg-stone-200 transition-colors whitespace-nowrap">
+                  東部地區 (宜花東)
+                </button>
+              </div>
+
+              <!-- Hospital Search Box -->
+              <div class="relative w-full md:w-64">
+                <input 
+                  type="text" 
+                  id="vet-search-input" 
+                  placeholder="搜尋醫院名稱或縣市..." 
+                  class="w-full pl-9 pr-4 py-2 text-xs bg-stone-50 border border-stone-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-stone-800 text-slate-900 placeholder:text-stone-400"
+                />
+                <svg class="w-4 h-4 text-stone-400 absolute left-3 top-2.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                </svg>
+              </div>
+            </div>
+
+            <!-- Vet Clinic Cards Container (Dynamic) -->
+            <div id="vet-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              <!-- Dynamically populated via JavaScript -->
+            </div>
+
+            <!-- Vet Empty Search State -->
+            <div id="vet-empty" class="hidden text-center py-12">
+              <p class="text-sm text-stone-500 font-medium">查無符合搜尋條件的特寵醫院</p>
+              <p class="text-xs text-stone-400 mt-1">請嘗試不同縣市關鍵字，或切換至「全台灣」標籤瀏覽所有院所</p>
+            </div>
+          </div>
+
+          <!-- Clinic Preparation Guide -->
+          <div class="p-6 rounded-xl border border-stone-200 bg-stone-100/70 text-xs sm:text-sm text-slate-700 space-y-2">
+            <h4 class="font-bold text-slate-900 text-sm">💡 就診前必備清單：</h4>
+            <ul class="list-disc list-inside space-y-1 text-slate-600 pl-1">
+              <li><strong>安全保暖外出籠：</strong> 外出籠內置入毛巾睡窩，底部鋪設暖暖包（需隔布防燙），避免蜜袋鼯受凍受風。</li>
+              <li><strong>新鮮排泄物採樣：</strong> 若因腹瀉或軟便就醫，請收集 2 小時內之新鮮糞便（置於保鮮夾鏈袋）供顯微鏡寄生蟲檢查。</li>
+              <li><strong>平時飲食與生活錄影：</strong> 記錄近 3 天食譜配方、食量增減、以及若有抽搐、歪頭、軟腳時的即時手機錄影，以利獸醫診斷。</li>
+            </ul>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- Section 7: 飼養前自評測驗與心理準備（Readiness Assessment） -->
+      <section id="assessment" class="py-16 bg-white border-b border-stone-200">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          
+          <div class="text-center max-w-2xl mx-auto mb-10">
+            <span class="text-xs font-semibold uppercase tracking-wider text-stone-500">負責任的愛</span>
+            <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mt-1">
+              07. 飼養前「真心話」適配評估檢測
+            </h2>
+            <p class="text-slate-600 mt-2 text-sm leading-relaxed">
+              蜜袋鼯非常可愛，但牠們絕非低維護成本的「懶人寵物」。請勾選以下 6 項真實情境，評估你是否真的準備好接納這份長達 15 年的生命承諾：
+            </p>
+          </div>
+
+          <!-- Assessment Checkboxes -->
+          <div class="space-y-4 bg-stone-50 p-6 sm:p-8 rounded-2xl border border-stone-200">
+            
+            <label class="flex items-start gap-3.5 p-3.5 rounded-xl bg-white border border-stone-200 cursor-pointer hover:border-stone-400 transition-colors">
+              <input type="checkbox" class="assessment-check mt-1 w-4 h-4 text-stone-900 rounded border-stone-300 focus:ring-stone-900" />
+              <div>
+                <p class="text-sm font-bold text-slate-900">能接受夜行性生活作息與夜晚動靜？</p>
+                <p class="text-xs text-slate-600 mt-0.5">蜜袋鼯半夜常會跑輪、進食、汪汪叫或嘎嘎發聲，且可能影響淺眠者的睡眠品質。</p>
+              </div>
+            </label>
+
+            <label class="flex items-start gap-3.5 p-3.5 rounded-xl bg-white border border-stone-200 cursor-pointer hover:border-stone-400 transition-colors">
+              <input type="checkbox" class="assessment-check mt-1 w-4 h-4 text-stone-900 rounded border-stone-300 focus:ring-stone-900" />
+              <div>
+                <p class="text-sm font-bold text-slate-900">能接受特殊體味與不可控的排泄習慣？</p>
+                <p class="text-xs text-slate-600 mt-0.5">公鼯發情時有明顯腺體氣味，且無法像狗貓完全訓練定點上廁所，放風時手上或衣服難免沾染。</p>
+              </div>
+            </label>
+
+            <label class="flex items-start gap-3.5 p-3.5 rounded-xl bg-white border border-stone-200 cursor-pointer hover:border-stone-400 transition-colors">
+              <input type="checkbox" class="assessment-check mt-1 w-4 h-4 text-stone-900 rounded border-stone-300 focus:ring-stone-900" />
+              <div>
+                <p class="text-sm font-bold text-slate-900">願意每天撥出 1–2 小時耐心陪伴互動？</p>
+                <p class="text-xs text-slate-600 mt-0.5">群居動物極度依賴社交。孤單冷落容易使牠們出現自殘行為，需要穩定陪伴維持親人性。</p>
+              </div>
+            </label>
+
+            <label class="flex items-start gap-3.5 p-3.5 rounded-xl bg-white border border-stone-200 cursor-pointer hover:border-stone-400 transition-colors">
+              <input type="checkbox" class="assessment-check mt-1 w-4 h-4 text-stone-900 rounded border-stone-300 focus:ring-stone-900" />
+              <div>
+                <p class="text-sm font-bold text-slate-900">願意耐心備餐（調製主食配方、處理蔬果與昆蟲）？</p>
+                <p class="text-xs text-slate-600 mt-0.5">不能只餵單一飼料或種子。需經常備製高蛋白食譜、切洗新鮮蔬果、甚至給予活體麵包蟲或蟋蟀。</p>
+              </div>
+            </label>
+
+            <label class="flex items-start gap-3.5 p-3.5 rounded-xl bg-white border border-stone-200 cursor-pointer hover:border-stone-400 transition-colors">
+              <input type="checkbox" class="assessment-check mt-1 w-4 h-4 text-stone-900 rounded border-stone-300 focus:ring-stone-900" />
+              <div>
+                <p class="text-sm font-bold text-slate-900">具備負擔特寵醫療費用的經濟能力？</p>
+                <p class="text-xs text-slate-600 mt-0.5">非犬貓動物門診、微量血液生化檢驗與氣體麻醉費用昂貴，動輒數千至上萬元，且無全民健保。</p>
+              </div>
+            </label>
+
+            <label class="flex items-start gap-3.5 p-3.5 rounded-xl bg-white border border-stone-200 cursor-pointer hover:border-stone-400 transition-colors">
+              <input type="checkbox" class="assessment-check mt-1 w-4 h-4 text-stone-900 rounded border-stone-300 focus:ring-stone-900" />
+              <div>
+                <p class="text-sm font-bold text-slate-900">能承諾 10–15 年的不離不棄（同住家人/房東皆同意）？</p>
+                <p class="text-xs text-slate-600 mt-0.5">牠們的壽命很長，無論未來升學、就業、搬家、結婚生子，都不可輕易轉手或遺棄。</p>
+              </div>
+            </label>
+
+            <!-- Results Banner -->
+            <div id="assessment-result" class="mt-6 p-5 rounded-xl bg-white border border-stone-200 text-center">
+              <p class="text-xs text-stone-500 font-medium uppercase tracking-wider">目前評估進度</p>
+              <p class="text-2xl font-bold text-slate-900 mt-1 tabular-nums">
+                已達成 <span id="checked-count" class="text-stone-900">0</span> / 6 項責任檢視
+              </p>
+              <p id="assessment-advice" class="text-xs sm:text-sm text-slate-600 mt-2">
+                請逐一檢視上方各項責任條件，點選勾選後將顯示客觀評估建議。
+              </p>
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+    </main>
+
+    <!-- Footer: Quiet Editorial Integrity (Zero Clutter) -->
+    <footer class="bg-stone-900 text-stone-400 py-12 border-t border-stone-800">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-start">
+          
+          <div class="md:col-span-5 space-y-3">
+            <div class="text-white font-bold text-lg flex items-center gap-2">
+              <span class="w-6 h-6 rounded bg-stone-700 text-amber-200 flex items-center justify-center font-mono text-xs">SG</span>
+              蜜袋鼯知識庫 · Sugar Glider Care Portal
+            </div>
+            <p class="text-xs text-stone-400 leading-relaxed max-w-md">
+              以科學照護、動物福利與愛為核心。推廣正確有袋類飼養常識，降低因錯誤餵食導致之代謝性骨病（MBD）與遺棄率。
+            </p>
+          </div>
+
+          <div class="md:col-span-4 space-y-2 text-xs">
+            <p class="text-stone-200 font-semibold uppercase tracking-wider">友善生命守則</p>
+            <p class="text-stone-400 leading-relaxed">
+              認養代替購買 · 終生不離不棄 · 拒絕衝動飼養 · 提倡特寵專業醫療定期健檢
+            </p>
+          </div>
+
+          <div class="md:col-span-3 space-y-2 text-xs md:text-right">
+            <p class="text-stone-200 font-semibold">快速回到頂端</p>
+            <a href="#hero" class="inline-block text-stone-400 hover:text-white transition-colors">↑ 返回頁首</a>
+            <p class="text-stone-500 text-[11px] pt-4">© 2026 蜜袋鼯飼育指南與特寵醫療地圖. All rights reserved.</p>
+          </div>
+
+        </div>
+      </div>
+    </footer>
+
+    <!-- Interactive Logic Script: Food Database & Vet Hospital Directory -->
+    <script>
+      // 1. Mobile Menu Toggle
+      const mobileBtn = document.getElementById('mobile-menu-btn');
+      const mobileMenu = document.getElementById('mobile-menu');
+      if (mobileBtn && mobileMenu) {
+        mobileBtn.addEventListener('click', () => {
+          mobileMenu.classList.toggle('hidden');
+        });
+        mobileMenu.querySelectorAll('a').forEach(link => {
+          link.addEventListener('click', () => mobileMenu.classList.add('hidden'));
+        });
+      }
+
+      // 2. Comprehensive Food Safety Database (24 Items)
+      const foodDatabase = [
+        // --- 🟢 安全可吃 (Safe) ---
+        {
+          id: 'papaya',
+          name: '木瓜（熟透去皮去籽）',
+          category: 'safe',
+          statusText: '極佳推薦',
+          tagClass: 'bg-emerald-50 text-emerald-800 border-emerald-200',
+          calciumPhosphorus: '鈣磷比約 4.8:1（極高鈣）',
+          description: '蜜袋鼯最推薦的水果之一！富含天然酵素與極佳的鈣質比例，有助於預防骨骼疾病。'
+        },
+        {
+          id: 'apple',
+          name: '蘋果（必須去皮去籽）',
+          category: 'safe',
+          statusText: '日常安全',
+          tagClass: 'bg-emerald-50 text-emerald-800 border-emerald-200',
+          calciumPhosphorus: '鈣磷比約 1:1',
+          description: '甜脆受歡迎，水分適中。注意：果核蘋果籽含有微量氰化物（毒性），必須徹底去除！'
+        },
+        {
+          id: 'blueberry',
+          name: '藍莓（洗淨瀝乾）',
+          category: 'safe',
+          statusText: '極佳推薦',
+          tagClass: 'bg-emerald-50 text-emerald-800 border-emerald-200',
+          calciumPhosphorus: '富含花青素與抗氧化劑',
+          description: '低熱量且護眼，大小適中，是建立親人性或做為日常訓練獎勵的最佳天然水果。'
+        },
+        {
+          id: 'hpw-mix',
+          name: 'HPW / BAP 主食配方泥',
+          category: 'safe',
+          statusText: '必備主食',
+          tagClass: 'bg-emerald-50 text-emerald-800 border-emerald-200',
+          calciumPhosphorus: '經科學調配之黃金營養比',
+          description: '包含蜜袋鼯專用高蛋白粉、純天然蜂花粉與蜂蜜，是維持健康生命體徵的關鍵核心飲食。'
+        },
+        {
+          id: 'egg-white',
+          name: '全熟水煮蛋蛋白',
+          category: 'safe',
+          statusText: '優質蛋白',
+          tagClass: 'bg-emerald-50 text-emerald-800 border-emerald-200',
+          calciumPhosphorus: '純淨低脂蛋白質',
+          description: '必須徹底煮熟！提供好吸收的胺基酸。蛋黃因膽固醇與脂肪偏高，僅能極微量偶爾給予。'
+        },
+        {
+          id: 'chicken-breast',
+          name: '水煮去皮無鹽雞胸肉',
+          category: 'safe',
+          statusText: '優質蛋白',
+          tagClass: 'bg-emerald-50 text-emerald-800 border-emerald-200',
+          calciumPhosphorus: '純肉蛋白，需裹鈣粉補充',
+          description: '撕成細絲狀餵食。絕對不可添加任何鹽、胡椒、油或調味料，以水煮至全熟為準。'
+        },
+        {
+          id: 'dubia',
+          name: '人工養殖杜比亞蟑螂',
+          category: 'safe',
+          statusText: '活體昆蟲首選',
+          tagClass: 'bg-emerald-50 text-emerald-800 border-emerald-200',
+          calciumPhosphorus: '外殼軟、肉質豐、比麵包蟲更優',
+          description: '極佳的活體高蛋白來源，能滿足其捕食天性。務必選購合格養殖個體，嚴禁野外抓捕。'
+        },
+        {
+          id: 'broccoli',
+          name: '綠花椰菜（熟水煮）',
+          category: 'safe',
+          statusText: '高纖蔬菜',
+          tagClass: 'bg-emerald-50 text-emerald-800 border-emerald-200',
+          calciumPhosphorus: '鈣磷比約 1:1.5',
+          description: '水煮燙過後容易消化，富含維生素 C 與纖維質，適合切碎拌入主食配方中。'
+        },
+        {
+          id: 'honey',
+          name: '純天然無添加蜂蜜',
+          category: 'safe',
+          statusText: '調配用',
+          tagClass: 'bg-emerald-50 text-emerald-800 border-emerald-200',
+          calciumPhosphorus: '天然糖分來源',
+          description: '野外以樹汁及花蜜為主食。蜂蜜適量加入 HPW 配方中可提升適口性，但不可直接單餵當水喝。'
+        },
+        {
+          id: 'guava',
+          name: '芭樂（去籽去皮）',
+          category: 'safe',
+          statusText: '高維生素C',
+          tagClass: 'bg-emerald-50 text-emerald-800 border-emerald-200',
+          calciumPhosphorus: '硬度高，需切碎',
+          description: '富含高含量維他命 C，質地較硬需切碎成小丁塊，芭樂籽質地堅硬容易卡腸道需剔除。'
+        },
+
+        // --- 🟡 限量或去籽去皮 (Caution) ---
+        {
+          id: 'banana',
+          name: '香蕉',
+          category: 'caution',
+          statusText: '需嚴格限量',
+          tagClass: 'bg-amber-50 text-amber-800 border-amber-200',
+          calciumPhosphorus: '鈣磷比極低（約 1:3.7）',
+          description: '蜜袋鼯極愛吃，但磷與鉀含量過高！若大量食用會阻礙鈣質吸收誘發骨病，一週最多指甲蓋大小。'
+        },
+        {
+          id: 'mealworm',
+          name: '大麥蟲 / 麵包蟲',
+          category: 'caution',
+          statusText: '適量獎勵',
+          tagClass: 'bg-amber-50 text-amber-800 border-amber-200',
+          calciumPhosphorus: '磷超高（鈣磷比 1:18）',
+          description: '高脂肪、高磷、硬殼甲殼素多。若吃太多容易發胖及缺鈣！餵食時建議定期沾裹特寵碳酸鈣粉。'
+        },
+        {
+          id: 'spinach',
+          name: '菠菜',
+          category: 'caution',
+          statusText: '少量煮熟',
+          tagClass: 'bg-amber-50 text-amber-800 border-amber-200',
+          calciumPhosphorus: '草酸含量高',
+          description: '草酸會與鈣質在腸道中結合形成草酸鈣，大幅降低鈣質吸收率並增加泌尿道結石風險。'
+        },
+        {
+          id: 'orange',
+          name: '柑橘 / 柳丁類',
+          category: 'caution',
+          statusText: '易軟便拉肚',
+          tagClass: 'bg-amber-50 text-amber-800 border-amber-200',
+          calciumPhosphorus: '酸度偏高',
+          description: '高檸檬酸與水分容易刺激蜜袋鼯腸胃黏膜，引發腹瀉與尿液過酸刺激皮膚，不建議頻繁給予。'
+        },
+        {
+          id: 'corn',
+          name: '玉米粒',
+          category: 'caution',
+          statusText: '磷高澱粉多',
+          tagClass: 'bg-amber-50 text-amber-800 border-amber-200',
+          calciumPhosphorus: '鈣磷比不均衡（約 1:12）',
+          description: '澱粉多且磷過高，外皮纖維難以完全咀嚼消化，偶爾一兩粒即可，不可當常態蔬菜。'
+        },
+        {
+          id: 'yogurt',
+          name: '無糖全脂熟優格',
+          category: 'caution',
+          statusText: '偶爾益生菌補充',
+          tagClass: 'bg-amber-50 text-amber-800 border-amber-200',
+          calciumPhosphorus: '經發酵乳糖較低',
+          description: '乳糖已被益生菌分解，可用筷子沾取微量調養腸道菌群。但一般液態牛奶絕對禁止！'
+        },
+
+        // --- 🔴 絕對禁吃 / 致命毒性 (Danger) ---
+        {
+          id: 'chocolate',
+          name: '巧克力 / 可可類製品',
+          category: 'danger',
+          statusText: '致命劇毒 ☠️',
+          tagClass: 'bg-rose-50 text-rose-800 border-rose-200',
+          calciumPhosphorus: '含可可鹼與咖啡因',
+          description: '蜜袋鼯心臟極小，可可鹼會引發心搏過速、肌肉痙攣、抽搐、神經中毒與急性死亡。'
+        },
+        {
+          id: 'onion-garlic',
+          name: '洋蔥 / 大蒜 / 青蔥 / 韭菜',
+          category: 'danger',
+          statusText: '致命溶血性貧血 ☠️',
+          tagClass: 'bg-rose-50 text-rose-800 border-rose-200',
+          calciumPhosphorus: '含二硫化物與硫代硫酸鹽',
+          description: '破壞紅血球引起急性溶血性貧血，出現血尿、缺氧、休克，烹煮過之湯汁亦具毒性！'
+        },
+        {
+          id: 'avocado',
+          name: '酪梨（牛油果）',
+          category: 'danger',
+          statusText: '致命毒素 ☠️',
+          tagClass: 'bg-rose-50 text-rose-800 border-rose-200',
+          calciumPhosphorus: '含酪梨素（Persin）',
+          description: '對鳥類與有袋類皆具強烈心肌毒性，會引起呼吸衰竭、胸腔積水與猝死，全果及果核皆嚴禁！'
+        },
+        {
+          id: 'grape',
+          name: '葡萄與葡萄乾',
+          category: 'danger',
+          statusText: '急性腎衰竭 ☠️',
+          tagClass: 'bg-rose-50 text-rose-800 border-rose-200',
+          calciumPhosphorus: '未知腎毒性機制',
+          description: '與犬貓類似，微量即可能引發不可逆的急性腎小管壞死與無尿症，絕對不可餵食！'
+        },
+        {
+          id: 'fruit-seeds',
+          name: '蘋果籽 / 水蜜桃核 / 櫻桃核',
+          category: 'danger',
+          statusText: '氰化物中毒 ☠️',
+          tagClass: 'bg-rose-50 text-rose-800 border-rose-200',
+          calciumPhosphorus: '含苦杏仁苷（Cyanogenic glycoside）',
+          description: '果核咬碎後會釋放劇毒氰化氫，阻斷組織細胞利用氧氣，導致窒息與死亡。'
+        },
+        {
+          id: 'milk',
+          name: '市售牛奶與高乳糖乳品',
+          category: 'danger',
+          statusText: '嚴重乳糖不耐腹瀉 ☠️',
+          tagClass: 'bg-rose-50 text-rose-800 border-rose-200',
+          calciumPhosphorus: '缺乏乳糖酶',
+          description: '成鼯缺乏足夠乳糖分解酶，飲用牛奶會引發水瀉脫水，幾小時內便能造成低血容量休克。'
+        },
+        {
+          id: 'raw-beans',
+          name: '未煮熟生豆類（四季豆/黃豆）',
+          category: 'danger',
+          statusText: '植物凝集素毒性 ☠️',
+          tagClass: 'bg-rose-50 text-rose-800 border-rose-200',
+          calciumPhosphorus: '含植物血球凝集素（Phytohaemagglutinin）',
+          description: '引起腸胃嚴重糜爛、噁心劇烈腹痛，所有豆類若要食用必須完全高溫蒸熟。'
+        },
+        {
+          id: 'wild-insects',
+          name: '野生抓捕昆蟲（野外蟑螂/野蛾）',
+          category: 'danger',
+          statusText: '農藥與寄生蟲 ☠️',
+          tagClass: 'bg-rose-50 text-rose-800 border-rose-200',
+          calciumPhosphorus: '體內附著殺蟲劑殘留',
+          description: '野外昆蟲體內充滿人體殺蟲劑毒性與鉤頭蟲等致命寄生蟲，只能購買合格室內繁育昆蟲。'
+        }
+      ];
+
+      // 3. Veterinary Hospital Database across Taiwan
+      const vetDatabase = [
+        // 北部
+        {
+          name: '剛果非犬貓動物醫院',
+          region: 'north',
+          regionLabel: '新北市新店區',
+          address: '新北市新店區中興路三段259號',
+          phone: '02-8665-5700',
+          tags: ['全台特寵先驅', '採全面預約制', '氣體麻醉與超音波'],
+          features: '台灣最富盛名的非犬貓野生動物專科醫院之一，醫師群對蜜袋鼯生理、手術、牙科與內科診治經驗極為豐富。'
+        },
+        {
+          name: '獴獴加非犬貓專科醫院',
+          region: 'north',
+          regionLabel: '新北市新莊區',
+          address: '新北市新莊區中正路125號',
+          phone: '02-2992-6641',
+          tags: ['非犬貓專門', '設備齊全', '需提前預約'],
+          features: '專門看診兔、天竺鼠、蜜袋鼯與鳥類。設有專屬非犬貓住院保溫箱與高解析微量生化檢驗儀。'
+        },
+        {
+          name: '亞馬森特寵專科醫院',
+          region: 'north',
+          regionLabel: '台北市內湖區',
+          address: '台北市內湖區成功路四段311號',
+          phone: '02-8792-3248',
+          tags: ['特寵重症', '獨立診間', '預約優先'],
+          features: '台北老牌野生動物醫院，院長劉醫師及醫療團隊專精各類特殊寵物疾病診治與外科手術。'
+        },
+        {
+          name: '不萊梅特殊寵物醫院',
+          region: 'north',
+          regionLabel: '台北市大安區',
+          address: '台北市大安區信義路四段186巷17號',
+          phone: '02-2707-0099',
+          tags: ['特寵專科', '環境安靜', '預約制'],
+          features: '專為小型哺乳動物與爬蟲設計的減壓安靜就診環境，醫師細心溫和，解說飼養衛教詳細。'
+        },
+        {
+          name: '普羅特殊寵物醫院',
+          region: 'north',
+          regionLabel: '桃園市中壢區',
+          address: '桃園市中壢區環北路441號',
+          phone: '03-453-6111',
+          tags: ['桃園特寵首選', '設備現代化', '建議電話預約'],
+          features: '桃園地區備受推薦的特殊寵物專門醫院，提供蜜袋鼯例行健檢、結紮與內外科處置。'
+        },
+        {
+          name: '仁心動物醫院（特寵門診）',
+          region: 'north',
+          regionLabel: '新竹市東區',
+          address: '新竹市東區光復路一段525-4號',
+          phone: '03-577-1111',
+          tags: ['新竹特寵', '指定醫師門診', '出發前請確認班表'],
+          features: '設有專門的特殊寵物門診時段，配備小型動物吸入性麻醉及專用檢查器材。'
+        },
+
+        // 中部
+        {
+          name: '侏儸紀野生動物專科醫院',
+          region: 'central',
+          regionLabel: '台中市北區',
+          address: '台中市北區英才路351號',
+          phone: '04-2202-8711',
+          tags: ['中部特寵權威', '急診與重症手術', '預約制'],
+          features: '中部最具代表性的特寵醫療中心，朱醫師及專業醫療團隊專門接治全台各類疑難雜症野生動物。'
+        },
+        {
+          name: '達爾文非犬貓動物醫院',
+          region: 'central',
+          regionLabel: '台中市西區',
+          address: '台中市西區博館路157號',
+          phone: '04-2326-2759',
+          tags: ['專業親切', '特寵健檢', '預約制'],
+          features: '老牌非犬貓專科，看診細緻有耐心，在蜜袋鼯皮膚病、消化道疾病與營養諮詢上評價極高。'
+        },
+        {
+          name: '鑫鑫特寵動物醫院',
+          region: 'central',
+          regionLabel: '台中市南屯區',
+          address: '台中市南屯區黎明路一段1120號',
+          phone: '04-2380-6088',
+          tags: ['特寵專科', '台中南屯', '建議預約'],
+          features: '提供特殊寵物完整健康檢查、糞便蟲卵顯微鏡篩檢與專業結紮麻醉服務。'
+        },
+        {
+          name: '佳諾野生動物醫院',
+          region: 'central',
+          regionLabel: '彰化縣彰化市',
+          address: '彰化縣彰化市自強路80號',
+          phone: '04-736-2285',
+          tags: ['彰化特寵', '非犬貓門診', '電聯掛號'],
+          features: '彰化地區少數具備完善野生動物診療經驗的專門醫院，方便中部沿海及彰化飼主就近就醫。'
+        },
+
+        // 南部
+        {
+          name: '邦尼野生動物專科醫院',
+          region: 'south',
+          regionLabel: '高雄市三民區',
+          address: '高雄市三民區民族一路438號',
+          phone: '07-380-9990',
+          tags: ['南部特寵指標', '設備先進', '預約制'],
+          features: '南部地區極具口碑之特寵專門醫院，擁有完善的小型動物加護保溫箱與高規手術室。'
+        },
+        {
+          name: '蓋亞野生動物專科醫院',
+          region: 'south',
+          regionLabel: '高雄市左營區',
+          address: '高雄市左營區自由四路281號',
+          phone: '07-345-5660',
+          tags: ['特寵專科', '評估細緻', '採預約制'],
+          features: '高雄知名野生動物醫院，醫師對蜜袋鼯緊迫管理與疾病防範衛教非常詳盡。'
+        },
+        {
+          name: '諾亞非犬貓動物醫院',
+          region: 'south',
+          regionLabel: '台南市北區',
+          address: '台南市北區西門路四段108號',
+          phone: '06-251-5123',
+          tags: ['台南特寵首選', '非犬貓專屬', '預約制'],
+          features: '台南地區專業非犬貓特寵醫院，擅長蜜袋鼯外傷處理、結紮手術及寄生蟲驅蟲治療。'
+        },
+        {
+          name: '立安動物醫院（特寵專科）',
+          region: 'south',
+          regionLabel: '台南市南區',
+          address: '台南市南區永華路一段186號',
+          phone: '06-228-6538',
+          tags: ['老字號診所', '特定特寵門診', '出發前致電確認'],
+          features: '具備特寵診療經驗，設有專用氣體麻醉機與檢查顯微儀器。'
+        },
+        {
+          name: '齊恩特寵動物醫院',
+          region: 'south',
+          regionLabel: '嘉義市東區',
+          address: '嘉義市東區吳鳳南路178號',
+          phone: '05-228-1122',
+          tags: ['嘉義特寵專科', '預約制', '服務親切'],
+          features: '嘉義地區少數能看診蜜袋鼯的專門院所，提供常規健檢與急症初步支持療法。'
+        },
+        {
+          name: '心動非犬貓動物醫院',
+          region: 'south',
+          regionLabel: '屏東縣屏東市',
+          address: '屏東縣屏東市廣東路628號',
+          phone: '08-736-6999',
+          tags: ['屏東特寵推薦', '預約就診', '專業細心'],
+          features: '屏東地區特殊寵物看診推薦院所，讓屏東在地飼主不需長途奔波至高雄即可獲得專業診療。'
+        },
+
+        // 東部
+        {
+          name: '綠風野生動物醫院',
+          region: 'east',
+          regionLabel: '宜蘭縣羅東鎮',
+          address: '宜蘭縣羅東鎮維揚路32號',
+          phone: '03-951-8899',
+          tags: ['宜蘭特寵', '專業野生動物診治', '建議電聯預約'],
+          features: '宜蘭在地專業特寵野生動物醫院，免去宜蘭飼主穿越雪隧至台北就醫的顛簸與緊迫。'
+        },
+        {
+          name: '心寵特寵專科動物醫院',
+          region: 'east',
+          regionLabel: '花蓮縣花蓮市',
+          address: '花蓮縣花蓮市中正路468號',
+          phone: '03-832-6688',
+          tags: ['花蓮特寵', '特寵專科醫師', '需先電話預約'],
+          features: '花蓮地區極度珍貴的非犬貓特殊寵物醫療站，提供蜜袋鼯急救與內科長期調理諮詢。'
+        },
+        {
+          name: '東岸特寵野生動物診所',
+          region: 'east',
+          regionLabel: '台東縣台東市',
+          address: '台東縣台東市更生路312號',
+          phone: '089-335-511',
+          tags: ['台東特寵', '定期門診', '請先確認班表'],
+          features: '支援台東地區非犬貓動物醫療，提供基礎健檢、驅蟲與轉診急救網絡。'
+        }
+      ];
+
+      // 4. Render Food Grid
+      let currentFoodFilter = 'all';
+      let currentFoodSearch = '';
+
+      function renderFoodGrid() {
+        const grid = document.getElementById('food-grid');
+        const emptyState = document.getElementById('food-empty');
+        if (!grid) return;
+
+        const filtered = foodDatabase.filter(item => {
+          const matchCategory = (currentFoodFilter === 'all') || (item.category === currentFoodFilter);
+          const matchSearch = currentFoodSearch === '' || 
+            item.name.toLowerCase().includes(currentFoodSearch) || 
+            item.description.toLowerCase().includes(currentFoodSearch) ||
+            item.statusText.toLowerCase().includes(currentFoodSearch);
+          return matchCategory && matchSearch;
+        });
+
+        if (filtered.length === 0) {
+          grid.innerHTML = '';
+          emptyState.classList.remove('hidden');
+          return;
+        }
+
+        emptyState.classList.add('hidden');
+        grid.innerHTML = filtered.map(item => `
+          <div class="p-5 rounded-xl bg-white border border-stone-200 hover:border-stone-300 hover:shadow-sm transition-all flex flex-col justify-between">
+            <div>
+              <div class="flex items-start justify-between gap-2 mb-2">
+                <h4 class="text-base font-bold text-slate-900">${item.name}</h4>
+                <span class="text-[11px] font-semibold px-2 py-0.5 rounded-full border whitespace-nowrap ${item.tagClass}">
+                  ${item.statusText}
+                </span>
+              </div>
+              <p class="text-xs font-medium text-stone-500 mb-2">${item.calciumPhosphorus}</p>
+              <p class="text-xs text-slate-600 leading-relaxed">${item.description}</p>
+            </div>
+            <div class="mt-4 pt-3 border-t border-stone-100 flex items-center justify-between text-[11px] text-stone-400">
+              <span>分類標籤</span>
+              <span class="font-medium text-slate-700 uppercase">${item.category === 'safe' ? '安全食材' : (item.category === 'caution' ? '謹慎限量' : '絕對禁吃')}</span>
+            </div>
+          </div>
+        `).join('');
+      }
+
+      // 5. Render Vet Hospital Grid with Google Maps Direct URLs
+      let currentVetRegion = 'all';
+      let currentVetSearch = '';
+
+      function renderVetGrid() {
+        const grid = document.getElementById('vet-grid');
+        const emptyState = document.getElementById('vet-empty');
+        if (!grid) return;
+
+        const filtered = vetDatabase.filter(item => {
+          const matchRegion = (currentVetRegion === 'all') || (item.region === currentVetRegion);
+          const matchSearch = currentVetSearch === '' ||
+            item.name.toLowerCase().includes(currentVetSearch) ||
+            item.regionLabel.toLowerCase().includes(currentVetSearch) ||
+            item.address.toLowerCase().includes(currentVetSearch) ||
+            item.features.toLowerCase().includes(currentVetSearch);
+          return matchRegion && matchSearch;
+        });
+
+        if (filtered.length === 0) {
+          grid.innerHTML = '';
+          emptyState.classList.remove('hidden');
+          return;
+        }
+
+        emptyState.classList.add('hidden');
+        grid.innerHTML = filtered.map(item => {
+          // Direct Google Maps Link with universal search encoding
+          const mapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(item.name + ' ' + item.address)}`;
+          const telUrl = `tel:${item.phone.replace(/[^0-9]/g, '')}`;
+
+          return `
+            <div class="p-6 rounded-xl bg-stone-50/70 border border-stone-200 hover:bg-white hover:shadow-md transition-all flex flex-col justify-between">
+              <div>
+                <div class="flex items-center justify-between gap-2 mb-2">
+                  <span class="text-xs font-semibold text-stone-700 bg-stone-200/80 px-2.5 py-0.5 rounded text-[11px]">${item.regionLabel}</span>
+                  <span class="text-[11px] text-stone-500 font-mono">特寵野生動物專科</span>
+                </div>
+                <h4 class="text-lg font-bold text-slate-900">${item.name}</h4>
+                <p class="text-xs text-slate-600 mt-2 leading-relaxed">${item.features}</p>
+                
+                <div class="mt-4 space-y-1.5 text-xs text-slate-600">
+                  <div class="flex items-start gap-2">
+                    <span class="text-stone-400 shrink-0">📍</span>
+                    <span class="text-slate-700 select-all">${item.address}</span>
+                  </div>
+                  <div class="flex items-center gap-2">
+                    <span class="text-stone-400 shrink-0">📞</span>
+                    <a href="${telUrl}" class="font-mono text-slate-800 hover:text-stone-900 underline underline-offset-2">${item.phone}</a>
+                  </div>
+                </div>
+
+                <!-- Tags unboxed -->
+                <div class="flex flex-wrap gap-2 text-[11px] text-stone-500 mt-4 pt-3 border-t border-stone-200/60">
+                  ${item.tags.map(tag => `<span class="bg-white px-2 py-0.5 rounded border border-stone-200">${tag}</span>`).join('')}
+                </div>
+              </div>
+
+              <!-- Action Buttons: Google Maps & Call -->
+              <div class="grid grid-cols-2 gap-3 mt-6 pt-4 border-t border-stone-200">
+                <a 
+                  href="${mapsUrl}" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  class="flex items-center justify-center gap-1.5 py-2 px-3 text-xs font-semibold text-white bg-stone-900 rounded-lg hover:bg-stone-800 transition-colors shadow-sm text-center"
+                >
+                  <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                  </svg>
+                  <span>Google 地圖導航</span>
+                </a>
+
+                <a 
+                  href="${telUrl}" 
+                  class="flex items-center justify-center gap-1.5 py-2 px-3 text-xs font-semibold text-slate-700 bg-white border border-stone-300 rounded-lg hover:bg-stone-100 transition-colors text-center"
+                >
+                  <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+                  </svg>
+                  <span>撥號掛號</span>
+                </a>
+              </div>
+            </div>
+          `;
+        }).join('');
+      }
+
+      // 6. Food Filter Events
+      document.querySelectorAll('.food-tab-btn').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+          document.querySelectorAll('.food-tab-btn').forEach(b => {
+            b.classList.remove('bg-stone-900', 'text-white', 'shadow-sm');
+            b.classList.add('bg-white', 'text-stone-700', 'border', 'border-stone-200');
+          });
+          btn.classList.add('bg-stone-900', 'text-white', 'shadow-sm');
+          btn.classList.remove('bg-white', 'text-stone-700', 'border');
+          currentFoodFilter = btn.getAttribute('data-filter') || 'all';
+          renderFoodGrid();
+        });
+      });
+
+      const foodSearchInput = document.getElementById('food-search-input');
+      if (foodSearchInput) {
+        foodSearchInput.addEventListener('input', (e) => {
+          currentFoodSearch = e.target.value.trim().toLowerCase();
+          renderFoodGrid();
+        });
+      }
+
+      // 7. Vet Region Filter Events
+      document.querySelectorAll('.vet-tab-btn').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+          document.querySelectorAll('.vet-tab-btn').forEach(b => {
+            b.classList.remove('bg-stone-900', 'text-white', 'shadow-sm');
+            b.classList.add('bg-stone-100', 'text-slate-700');
+          });
+          btn.classList.add('bg-stone-900', 'text-white', 'shadow-sm');
+          btn.classList.remove('bg-stone-100', 'text-slate-700');
+          currentVetRegion = btn.getAttribute('data-region') || 'all';
+          renderVetGrid();
+        });
+      });
+
+      const vetSearchInput = document.getElementById('vet-search-input');
+      if (vetSearchInput) {
+        vetSearchInput.addEventListener('input', (e) => {
+          currentVetSearch = e.target.value.trim().toLowerCase();
+          renderVetGrid();
+        });
+      }
+
+      // 8. Assessment Checklist Calculator
+      const checkboxes = document.querySelectorAll('.assessment-check');
+      const checkedCountSpan = document.getElementById('checked-count');
+      const adviceP = document.getElementById('assessment-advice');
+
+      function updateAssessment() {
+        let count = 0;
+        checkboxes.forEach(cb => {
+          if (cb.checked) count++;
+        });
+        if (checkedCountSpan) checkedCountSpan.textContent = count;
+
+        if (adviceP) {
+          if (count === 6) {
+            adviceP.innerHTML = '<span class="text-emerald-700 font-bold">🎉 太棒了！您具備了非常成熟且高度負責的飼育心理準備。</span> 請繼續深入研讀食譜與環境設置，給蜜袋鼯一個溫暖幸福的一生！';
+          } else if (count >= 4) {
+            adviceP.innerHTML = '<span class="text-amber-700 font-bold">⚠️ 您已具備多數條件，但尚有少數項目需要深思或與同住家人/房東充分溝通。</span> 特別是夜間聲響與長期醫療儲備，不可掉以輕心。';
+          } else if (count > 0) {
+            adviceP.innerHTML = '<span class="text-slate-700 font-medium">🌱 建議您暫緩購買，先多加入社團做功課、實地參訪有飼養經驗的朋友，確認生活作息能完全配合。</span>';
+          } else {
+            adviceP.textContent = '請逐一檢視上方各項責任條件，點選勾選後將顯示客觀評估建議。';
+          }
+        }
+      }
+
+      checkboxes.forEach(cb => cb.addEventListener('change', updateAssessment));
+
+      // 9. Budget Calculator Logic
+      const budgetQtyInput = document.getElementById('budget-qty');
+      const btnQtyMinus = document.getElementById('btn-qty-minus');
+      const btnQtyPlus = document.getElementById('btn-qty-plus');
+      const presetBtns = document.querySelectorAll('.budget-preset-btn');
+      const chkHardware = document.getElementById('budget-include-hardware');
+      const chkNeuter = document.getElementById('budget-include-neuter');
+      const chkVetAdv = document.getElementById('budget-vet-advanced');
+
+      const elMonthly = document.getElementById('res-monthly');
+      const elAnnualVet = document.getElementById('res-annual-vet');
+      const elFirstYear = document.getElementById('res-first-year');
+      const elSummaryQty = document.getElementById('res-summary-qty');
+
+      const elItemHpw = document.getElementById('item-hpw');
+      const elItemFresh = document.getElementById('item-fresh');
+      const elItemConsumables = document.getElementById('item-consumables');
+      const elItemVetAnnual = document.getElementById('item-vet-annual');
+      const elItemHardware = document.getElementById('item-hardware');
+      const elItemNeuter = document.getElementById('item-neuter');
+      const rowHardware = document.getElementById('row-hardware');
+      const rowNeuter = document.getElementById('row-neuter');
+
+      function calculateBudget() {
+        let qty = parseInt(budgetQtyInput ? budgetQtyInput.value : '2', 10);
+        if (isNaN(qty) || qty < 1) qty = 1;
+        if (qty > 8) qty = 8;
+        if (budgetQtyInput) budgetQtyInput.value = qty;
+        if (elSummaryQty) elSummaryQty.textContent = qty;
+
+        // Update preset button active state
+        presetBtns.forEach(btn => {
+          if (parseInt(btn.getAttribute('data-val') || '0', 10) === qty) {
+            btn.classList.add('bg-stone-900', 'text-white', 'font-medium');
+            btn.classList.remove('border', 'border-stone-200', 'text-slate-600', 'hover:bg-stone-100');
+          } else {
+            btn.classList.remove('bg-stone-900', 'text-white', 'font-medium');
+            btn.classList.add('border', 'border-stone-200', 'text-slate-600', 'hover:bg-stone-100');
+          }
+        });
+
+        // 1. Monthly costs:
+        // HPW / BAP + honey: NT$ 350 per glider
+        const hpwMonthly = qty * 350;
+        // Fresh fruits & insects: NT$ 550 per glider
+        const freshMonthly = qty * 550;
+        // Consumables (pads, bedding) & heating electricity: Base NT$ 400 + NT$ 150 per glider
+        const consumablesMonthly = 400 + (qty * 150);
+        const totalMonthly = hpwMonthly + freshMonthly + consumablesMonthly;
+
+        // 2. Annual veterinary costs:
+        // Basic checkup (NT$ 800) + 2x fecal exams (NT$ 800) = NT$ 1,600 per glider
+        // If advanced selected, + NT$ 1,500 per glider (X-ray/blood test)
+        const vetPerGlider = (chkVetAdv && chkVetAdv.checked) ? 3100 : 1600;
+        const totalAnnualVet = qty * vetPerGlider;
+
+        // 3. One-time hardware setup:
+        // 1-2 gliders: NT$ 6,500; 3-4 gliders: NT$ 8,500; 5+ gliders: NT$ 11,000
+        let hardwareCost = 6500;
+        if (qty >= 3 && qty <= 4) hardwareCost = 8500;
+        else if (qty > 4) hardwareCost = 11000;
+        const includeHardware = chkHardware ? chkHardware.checked : true;
+        const finalHardwareCost = includeHardware ? hardwareCost : 0;
+
+        // 4. One-time neuter cost: NT$ 3,000 per glider
+        const includeNeuter = chkNeuter ? chkNeuter.checked : true;
+        const finalNeuterCost = includeNeuter ? (qty * 3000) : 0;
+
+        // 5. First year total:
+        const firstYearTotal = finalHardwareCost + finalNeuterCost + (totalMonthly * 12) + totalAnnualVet;
+
+        // Format to UI
+        if (elItemHpw) elItemHpw.textContent = hpwMonthly.toLocaleString();
+        if (elItemFresh) elItemFresh.textContent = freshMonthly.toLocaleString();
+        if (elItemConsumables) elItemConsumables.textContent = consumablesMonthly.toLocaleString();
+        if (elItemVetAnnual) elItemVetAnnual.textContent = totalAnnualVet.toLocaleString();
+
+        if (elItemHardware) elItemHardware.textContent = hardwareCost.toLocaleString();
+        if (rowHardware) rowHardware.style.display = includeHardware ? 'flex' : 'none';
+
+        if (elItemNeuter) elItemNeuter.textContent = (qty * 3000).toLocaleString();
+        if (rowNeuter) rowNeuter.style.display = includeNeuter ? 'flex' : 'none';
+
+        if (elMonthly) elMonthly.textContent = totalMonthly.toLocaleString();
+        if (elAnnualVet) elAnnualVet.textContent = totalAnnualVet.toLocaleString();
+        if (elFirstYear) elFirstYear.textContent = firstYearTotal.toLocaleString();
+      }
+
+      if (btnQtyMinus) {
+        btnQtyMinus.addEventListener('click', () => {
+          let val = parseInt(budgetQtyInput ? budgetQtyInput.value : '2', 10);
+          if (val > 1) {
+            budgetQtyInput.value = val - 1;
+            calculateBudget();
+          }
+        });
+      }
+
+      if (btnQtyPlus) {
+        btnQtyPlus.addEventListener('click', () => {
+          let val = parseInt(budgetQtyInput ? budgetQtyInput.value : '2', 10);
+          if (val < 8) {
+            budgetQtyInput.value = val + 1;
+            calculateBudget();
+          }
+        });
+      }
+
+      if (budgetQtyInput) {
+        budgetQtyInput.addEventListener('input', calculateBudget);
+      }
+
+      presetBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          const val = btn.getAttribute('data-val');
+          if (val && budgetQtyInput) {
+            budgetQtyInput.value = val;
+            calculateBudget();
+          }
+        });
+      });
+
+      if (chkHardware) chkHardware.addEventListener('change', calculateBudget);
+      if (chkNeuter) chkNeuter.addEventListener('change', calculateBudget);
+      if (chkVetAdv) chkVetAdv.addEventListener('change', calculateBudget);
+
+      // 10. Multi-Pet Daily Weight Tracker Logic
+      const defaultPets = [
+        {
+          id: 'pet-pipi',
+          name: '皮皮',
+          gender: 'male',
+          morph: '經典原生灰',
+          oop: '2025-08-10',
+          records: [
+            { id: 'rec-1', date: '2026-10-14', weight: 122.5, note: '食慾良好，清盤吃完 HPW' },
+            { id: 'rec-2', date: '2026-10-10', weight: 121.0, note: '活動力正常，跑輪活力充沛' },
+            { id: 'rec-3', date: '2026-10-05', weight: 120.2, note: '剪指甲獎勵藍莓 1 顆' },
+            { id: 'rec-4', date: '2026-09-28', weight: 119.5, note: '特寵例行理學視診，糞檢正常' }
+          ]
+        },
+        {
+          id: 'pet-snowball',
+          name: '雪球',
+          gender: 'female',
+          morph: '白面金黃 (WFB)',
+          oop: '2025-11-02',
+          records: [
+            { id: 'rec-5', date: '2026-10-14', weight: 98.0, note: '剛睡醒秤重，親人討摸' },
+            { id: 'rec-6', date: '2026-10-08', weight: 97.2, note: '正常吃木瓜丁與熟蛋蛋白' },
+            { id: 'rec-7', date: '2026-10-01', weight: 96.0, note: '活潑黏人，在布袋中安靜梳毛' }
+          ]
+        }
+      ];
+
+      function loadPets() {
+        try {
+          const stored = localStorage.getItem('sugar_glider_pets_v2');
+          if (stored) {
+            const parsed = JSON.parse(stored);
+            if (Array.isArray(parsed) && parsed.length > 0) return parsed;
+          }
+        } catch (e) {
+          console.warn('Failed to parse localStorage pets, using default', e);
+        }
+        return defaultPets;
+      }
+
+      let pets = loadPets();
+      let activePetId = pets[0] ? pets[0].id : '';
+
+      function savePets() {
+        try {
+          localStorage.setItem('sugar_glider_pets_v2', JSON.stringify(pets));
+        } catch (e) {
+          console.warn('Failed to save pets to localStorage', e);
+        }
+      }
+
+      function getActivePet() {
+        return pets.find(p => p.id === activePetId) || pets[0];
+      }
+
+      function renderPetSwitcher() {
+        const container = document.getElementById('pet-switcher-container');
+        if (!container) return;
+
+        container.innerHTML = pets.map(p => {
+          const isActive = p.id === activePetId;
+          const genderSymbol = p.gender && p.gender.startsWith('female') ? '♀' : '♂';
+          return `
+            <button 
+              type="button" 
+              data-pet-id="${p.id}" 
+              class="pet-tab-btn flex items-center gap-1.5 px-3 py-1.5 text-xs font-semibold rounded-lg transition-colors whitespace-nowrap ${isActive ? 'bg-stone-900 text-white shadow-sm' : 'bg-white text-stone-700 border border-stone-200 hover:bg-stone-100'}"
+            >
+              <span>${genderSymbol}</span>
+              <span>${p.name}</span>
+              <span class="text-[10px] opacity-75 font-normal">(${p.records ? p.records.length : 0})</span>
+            </button>
+          `;
+        }).join('');
+
+        container.querySelectorAll('.pet-tab-btn').forEach(btn => {
+          btn.addEventListener('click', () => {
+            activePetId = btn.getAttribute('data-pet-id') || '';
+            renderCurrentPet();
+          });
+        });
+      }
+
+      function renderCurrentPet() {
+        const pet = getActivePet();
+        if (!pet) return;
+
+        renderPetSwitcher();
+
+        const elName = document.getElementById('cur-pet-name');
+        const elGender = document.getElementById('cur-pet-gender-badge');
+        const elMorph = document.getElementById('cur-pet-morph-text');
+        const elOop = document.getElementById('cur-pet-oop');
+        const elAvatar = document.getElementById('cur-pet-avatar');
+
+        if (elName) elName.textContent = pet.name;
+        if (elMorph) elMorph.textContent = pet.morph || '未記錄品種';
+        if (elOop) elOop.textContent = `出袋日 (OOP)：${pet.oop || '未記錄'}`;
+        
+        let genderLabel = '♂ 公鼯';
+        if (pet.gender === 'female') genderLabel = '♀ 母鼯';
+        else if (pet.gender === 'male-neutered') genderLabel = '♂✂️ 公鼯 (已結紮)';
+        else if (pet.gender === 'female-spayed') genderLabel = '♀✂️ 母鼯 (已結紮)';
+        if (elGender) elGender.textContent = genderLabel;
+
+        if (elAvatar) {
+          elAvatar.textContent = (pet.gender && pet.gender.startsWith('female')) ? '🌸' : '🌰';
+        }
+
+        const elLatestWeight = document.getElementById('cur-latest-weight');
+        const elWeightDiff = document.getElementById('cur-weight-diff');
+        const elHealthStatus = document.getElementById('cur-health-status');
+        const alertBox = document.getElementById('weight-alert-box');
+
+        const recs = pet.records ? [...pet.records].sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()) : [];
+
+        if (recs.length === 0) {
+          if (elLatestWeight) elLatestWeight.textContent = '--';
+          if (elWeightDiff) {
+            elWeightDiff.textContent = '尚無紀錄';
+            elWeightDiff.className = 'text-xs text-stone-400 mt-1';
+          }
+          if (elHealthStatus) {
+            elHealthStatus.textContent = '等待首次測量';
+            elHealthStatus.className = 'text-xs text-stone-500 mt-1';
+          }
+          if (alertBox) alertBox.classList.add('hidden');
+        } else {
+          const latest = recs[0];
+          if (elLatestWeight) elLatestWeight.textContent = Number(latest.weight).toFixed(1);
+
+          if (recs.length > 1) {
+            const prev = recs[1];
+            const diff = Number(latest.weight) - Number(prev.weight);
+            const pct = prev.weight > 0 ? (diff / prev.weight) * 100 : 0;
+            const sign = diff > 0 ? '+' : '';
+
+            if (elWeightDiff) {
+              elWeightDiff.textContent = `${sign}${diff.toFixed(1)}g (${sign}${pct.toFixed(1)}%)`;
+              if (pct < -8) {
+                elWeightDiff.className = 'text-sm font-bold tabular-nums text-rose-700 mt-1';
+              } else if (pct < -4) {
+                elWeightDiff.className = 'text-sm font-bold tabular-nums text-amber-700 mt-1';
+              } else {
+                elWeightDiff.className = 'text-sm font-bold tabular-nums text-emerald-700 mt-1';
+              }
+            }
+
+            if (elHealthStatus) {
+              if (pct < -8) {
+                elHealthStatus.textContent = '🚨 急症警訊：體重暴跌 > 8%';
+                elHealthStatus.className = 'text-xs font-bold text-rose-700 mt-1';
+              } else if (pct < -4) {
+                elHealthStatus.textContent = '⚠️ 注意：體重偏低下滑';
+                elHealthStatus.className = 'text-xs font-semibold text-amber-700 mt-1';
+              } else if (pct > 10) {
+                elHealthStatus.textContent = '💡 體重增長迅速（請防過胖）';
+                elHealthStatus.className = 'text-xs font-semibold text-amber-800 mt-1';
+              } else {
+                elHealthStatus.textContent = '🟢 體態穩定正常';
+                elHealthStatus.className = 'text-xs font-semibold text-emerald-700 mt-1';
+              }
+            }
+
+            if (alertBox) {
+              if (pct < -8) {
+                alertBox.innerHTML = `<strong>⚠️ 急重警訊：</strong>本次體重（${latest.weight}g）較前次（${prev.weight}g）驟降 <strong>${Math.abs(diff).toFixed(1)}g (${Math.abs(pct).toFixed(1)}%)</strong>！蜜袋鼯隱匿疾病能力極強，體重大幅下降常代表牙周嚴重膿瘍、脫水或代謝衰竭，建議儘速聯繫特寵專科診所！`;
+                alertBox.classList.remove('hidden');
+              } else {
+                alertBox.classList.add('hidden');
+              }
+            }
+          } else {
+            if (elWeightDiff) {
+              elWeightDiff.textContent = '首次記錄基準';
+              elWeightDiff.className = 'text-xs text-stone-500 mt-1';
+            }
+            if (elHealthStatus) {
+              elHealthStatus.textContent = '🟢 基準建立';
+              elHealthStatus.className = 'text-xs font-semibold text-emerald-700 mt-1';
+            }
+            if (alertBox) alertBox.classList.add('hidden');
+          }
+        }
+
+        renderWeightHistoryTable(pet);
+      }
+
+      function renderWeightHistoryTable(pet) {
+        const tbody = document.getElementById('weight-history-tbody');
+        const emptyState = document.getElementById('weight-history-empty');
+        if (!tbody) return;
+
+        const recs = pet.records ? [...pet.records].sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()) : [];
+
+        if (recs.length === 0) {
+          tbody.innerHTML = '';
+          if (emptyState) emptyState.classList.remove('hidden');
+          return;
+        }
+
+        if (emptyState) emptyState.classList.add('hidden');
+
+        tbody.innerHTML = recs.map((rec, index) => {
+          let diffHtml = '<span class="text-stone-400">基準</span>';
+          if (index < recs.length - 1) {
+            const nextOlder = recs[index + 1];
+            const diff = Number(rec.weight) - Number(nextOlder.weight);
+            const sign = diff > 0 ? '+' : '';
+            if (diff > 0) {
+              diffHtml = `<span class="text-emerald-700 font-medium tabular-nums">${sign}${diff.toFixed(1)}g</span>`;
+            } else if (diff < -3) {
+              diffHtml = `<span class="text-rose-700 font-bold tabular-nums">${diff.toFixed(1)}g</span>`;
+            } else if (diff < 0) {
+              diffHtml = `<span class="text-amber-700 font-medium tabular-nums">${diff.toFixed(1)}g</span>`;
+            } else {
+              diffHtml = `<span class="text-stone-500 tabular-nums">0.0g</span>`;
+            }
+          }
+
+          return `
+            <tr class="hover:bg-stone-50/80 transition-colors">
+              <td class="py-2.5 pr-3 font-mono text-slate-800 whitespace-nowrap">${rec.date}</td>
+              <td class="py-2.5 px-3 font-bold text-slate-900 tabular-nums whitespace-nowrap">${Number(rec.weight).toFixed(1)} g</td>
+              <td class="py-2.5 px-3 whitespace-nowrap">${diffHtml}</td>
+              <td class="py-2.5 px-3 text-slate-600 max-w-[200px] truncate" title="${rec.note || ''}">${rec.note || '<span class="text-stone-300">無備註</span>'}</td>
+              <td class="py-2.5 pl-3 text-right whitespace-nowrap">
+                <button type="button" data-del-id="${rec.id}" class="btn-del-weight text-stone-400 hover:text-rose-600 transition-colors text-[11px] p-1">
+                  刪除
+                </button>
+              </td>
+            </tr>
+          `;
+        }).join('');
+
+        tbody.querySelectorAll('.btn-del-weight').forEach(btn => {
+          btn.addEventListener('click', () => {
+            const recId = btn.getAttribute('data-del-id');
+            const targetPet = getActivePet();
+            if (targetPet && targetPet.records) {
+              targetPet.records = targetPet.records.filter(r => r.id !== recId);
+              savePets();
+              renderCurrentPet();
+            }
+          });
+        });
+      }
+
+      // Add Pet Modal Handlers
+      const btnOpenAddPet = document.getElementById('btn-open-add-pet');
+      const btnCloseAddPet = document.getElementById('btn-close-add-pet');
+      const addPetModal = document.getElementById('add-pet-modal');
+      const formAddPet = document.getElementById('form-add-pet');
+
+      if (btnOpenAddPet && addPetModal) {
+        btnOpenAddPet.addEventListener('click', () => {
+          addPetModal.classList.toggle('hidden');
+        });
+      }
+
+      if (btnCloseAddPet && addPetModal) {
+        btnCloseAddPet.addEventListener('click', () => {
+          addPetModal.classList.add('hidden');
+        });
+      }
+
+      if (formAddPet) {
+        formAddPet.addEventListener('submit', (e) => {
+          e.preventDefault();
+          const nameInput = document.getElementById('new-pet-name');
+          const genderInput = document.getElementById('new-pet-gender');
+          const morphInput = document.getElementById('new-pet-morph');
+          const birthInput = document.getElementById('new-pet-birth');
+
+          const name = nameInput ? nameInput.value.trim() : '';
+          if (!name) return;
+
+          const newPet = {
+            id: 'pet-' + Date.now(),
+            name: name,
+            gender: genderInput ? genderInput.value : 'male',
+            morph: morphInput ? morphInput.value : '經典原生灰',
+            oop: birthInput && birthInput.value ? birthInput.value : '',
+            records: []
+          };
+
+          pets.push(newPet);
+          activePetId = newPet.id;
+          savePets();
+
+          // Reset form & close
+          formAddPet.reset();
+          if (addPetModal) addPetModal.classList.add('hidden');
+          renderCurrentPet();
+        });
+      }
+
+      // Quick note buttons
+      document.querySelectorAll('.quick-note-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+          const noteInput = document.getElementById('input-weight-note');
+          if (noteInput) {
+            const current = noteInput.value.trim();
+            const tag = btn.textContent.trim();
+            noteInput.value = current ? `${current}、${tag}` : tag;
+          }
+        });
+      });
+
+      // Default date to today
+      const inputWeightDate = document.getElementById('input-weight-date');
+      if (inputWeightDate) {
+        const todayStr = new Date().toISOString().split('T')[0];
+        inputWeightDate.value = todayStr;
+      }
+
+      // Add Weight Form Handler
+      const formAddWeight = document.getElementById('form-add-weight');
+      if (formAddWeight) {
+        formAddWeight.addEventListener('submit', (e) => {
+          e.preventDefault();
+          const dateInput = document.getElementById('input-weight-date');
+          const valInput = document.getElementById('input-weight-val');
+          const noteInput = document.getElementById('input-weight-note');
+
+          const dateVal = dateInput && dateInput.value ? dateInput.value : new Date().toISOString().split('T')[0];
+          const weightNum = valInput ? parseFloat(valInput.value) : 0;
+          const noteText = noteInput ? noteInput.value.trim() : '';
+
+          if (isNaN(weightNum) || weightNum <= 0) return;
+
+          const pet = getActivePet();
+          if (!pet) return;
+
+          if (!pet.records) pet.records = [];
+
+          const newRecord = {
+            id: 'rec-' + Date.now(),
+            date: dateVal,
+            weight: weightNum,
+            note: noteText
+          };
+
+          pet.records.push(newRecord);
+          savePets();
+
+          // Reset form inputs (keep date)
+          if (valInput) valInput.value = '';
+          if (noteInput) noteInput.value = '';
+
+          renderCurrentPet();
+        });
+      }
+
+      // Initial Renders
+      renderFoodGrid();
+      renderVetGrid();
+      calculateBudget();
+      renderCurrentPet();
+    </script>
+  </body>
+</html>

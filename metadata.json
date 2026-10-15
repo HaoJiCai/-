@@ -1,0 +1,6 @@
+{
+  "name": "蜜袋鼯新手飼育指南與特寵醫療地圖",
+  "description": "專為想養與已養蜜袋鼯飼主打造的專業全方位指南：物種習性解析、新手飼育補給站、可吃與禁忌食物速查庫、全台特寵野生動物醫院整理與 Google 地圖導航。",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
